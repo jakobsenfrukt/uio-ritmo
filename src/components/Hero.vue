@@ -1,7 +1,9 @@
 <template>
   <div class="hero">
   <!--<div class="hero" :style="{ 'background-image': 'url(' + image + ')' }">-->
-    <img :src="image" />
+    <img v-if="image" :src="image" />
+    <video v-else>
+    </video>
     <div class="overlay">
       <transition name="fadeup" appear>
       <div class="text">
@@ -36,7 +38,7 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;*/
 
-  img {
+  img, video {
     width: 100%;
   }
 

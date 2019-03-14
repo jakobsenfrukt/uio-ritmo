@@ -1,4 +1,4 @@
-# UiO Forskningsformidling
+# UiO: RITMO's Annual Report 2018
 
 **Project setup**
 ```
