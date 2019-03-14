@@ -9,7 +9,7 @@
     </transition>
     <transition name="fadeup" appear>
       <section id="part1" class="text">
-        <p class="lead">2018 was the year that RITMO went from idea to reality. Even though many things have changed since we first started planning RITMO in 2012, the core people, the main ideas, and the excitement of being part of something quite unique, is still there!</p>
+        <p>2018 was the year that RITMO went from idea to reality. Even though many things have changed since we first started planning RITMO in 2012, the core people, the main ideas, and the excitement of being part of something quite unique, is still there!</p>
       </section>
     </transition>
     <Figure

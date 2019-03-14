@@ -6,7 +6,7 @@
         <div class="menu" id="main-menu">
           <ul>
             <!--<li><router-link to="/">Home</router-link></li>-->
-            <h3>Overskrift H1</h3>
+            <h3>Annual Report 2018</h3>
             <span class="subhead">RITMO - Centre for Interdisciplinary Studies in Rhythm, Time and Motion</span>
             <li><a href="#" v-scroll-to="{ el: '#intro', onStart: togglemenu }">Introduksjon</a></li>
             <li>
@@ -95,7 +95,7 @@ export default {
 
 .site-header {
   width: 100%;
-  background: $color-black;
+  background: $color-theme-dark;
   color: $color-white;
   display: flex;
   flex-wrap: wrap;
@@ -131,8 +131,7 @@ export default {
     padding: 1rem;
     width: $width-xs;
     color: $color-white;
-    background: $color-black;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
+    background: $color-theme-dark;
 
     transform: translateX($width-s);
     transition: transform .3s ease-in-out;

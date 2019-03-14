@@ -1,5 +1,7 @@
-$serif: georgia, serif;
-$sans-serif: arial, monospace;
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,700|PT+Serif:400,400i,700,700i|PT+Sans:400,400i,700,700i');
+
+$serif: 'pt serif', serif;
+$sans-serif: 'oswald', impact, sans-serif;
 
 $font-xs: 0.68rem;
 $font-s: 0.8rem;
@@ -11,6 +13,7 @@ $color-turquoise: rgb(91, 209, 215);
 $color-blue: rgb(0, 77, 97);
 
 $color-theme: $color-turquoise;
+$color-theme-dark: $color-blue;
 
 $color-background: $color-white;
 $color-text: $color-black;
