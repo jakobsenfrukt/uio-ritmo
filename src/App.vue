@@ -198,7 +198,7 @@ export default {
 .site-footer {
   width: 100%;
   padding: 8rem 1rem 4rem;
-  background: $color-black;
+  background: $color-theme-dark;
   color: $color-white;
 
   text-align: center;
