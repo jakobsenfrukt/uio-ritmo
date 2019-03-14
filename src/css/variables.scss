@@ -6,10 +6,11 @@ $font-s: 0.8rem;
 
 $color-white: #fff;
 $color-black: #000;
-$color-red: #e2231a;
-$color-gray: #dedede;
+$color-red: rgb(255, 80, 47);
+$color-turquoise: rgb(91, 209, 215);
+$color-blue: rgb(0, 77, 97);
 
-$color-theme: #2dc2b5;
+$color-theme: $color-turquoise;
 
 $color-background: $color-white;
 $color-text: $color-black;
