@@ -1,14 +1,14 @@
 <template>
   <div class="hero">
-  <!--<div class="hero" :style="{ 'background-image': 'url(' + image + ')' }">-->
     <img v-if="image" :src="image" />
-    <video v-else>
+    <video v-else muted autoplay>
+      <source :src="video" type="video/mp4">
     </video>
     <div class="overlay">
       <transition name="fadeup" appear>
       <div class="text">
         <h1>{{ heading }}</h1>
-        <span class="subhead">RITMO - Centre for Interdisciplinary Studies in Rhythm, Time and Motion</span>
+        <span class="subhead">{{ subhead }}</span>
       </div>
       </transition>
     </div>
@@ -20,7 +20,9 @@ export default {
   name: 'Hero',
   props: {
     image: String,
-    heading: String
+    video: String,
+    heading: String,
+    subhead: String
   }
 }
 </script>
@@ -33,19 +35,14 @@ export default {
   position: relative;
   min-height: 60vh;
 
-  /*height: 70vh;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;*/
-
   img, video {
     width: 100%;
+    padding-bottom: 6rem;
   }
 
   .overlay {
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 
     display: flex;
     align-items: flex-end;
@@ -54,14 +51,13 @@ export default {
     width: $width-m;
     max-width: 100%;
     margin: 0 auto;
-    color: white;
-    text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
   }
   h1 {
+    font-size: 5rem;
     margin-bottom: 0;
   }
   .subhead {
-    font-size: $font-s;
+    font-size: 1.6rem;
     line-height: 1.2;
     display: block;
     margin: 0.5rem 0 1.6rem;
