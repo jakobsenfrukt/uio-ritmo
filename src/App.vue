@@ -18,11 +18,8 @@
             <li><a href="#" v-scroll-to="{ el: '#toc8', onStart: togglemenu }">RITMO Behind the Scenes</a></li>
             <li><a href="#" v-scroll-to="{ el: '#toc9', onStart: togglemenu }">RITMO's profile</a></li>
             <li><a href="#" v-scroll-to="{ el: '#toc10', onStart: togglemenu }">Awards</a></li>
-            <li><a href="#" v-scroll-to="{ el: '#toc11', onStart: togglemenu }">Innovation Prize</a></li>
-            <li><a href="#" v-scroll-to="{ el: '#toc12', onStart: togglemenu }">Adacemy Membership</a></li>
-            <li><a href="#" v-scroll-to="{ el: '#toc13', onStart: togglemenu }">EUA Committee</a></li>
-            <li><a href="#" v-scroll-to="'#toc14'">RITMO People</a></li>
-            <li><a href="#" v-scroll-to="'#toc15'">International</a></li>
+            <li><a href="#" v-scroll-to="'#toc11'">RITMO People</a></li>
+            <li><a href="#" v-scroll-to="'#toc12'">International</a></li>
           </ul>
         </div>
         <div class="menu-toggle" :class="{ open: showmenu }" @click="togglemenu()">
@@ -146,7 +143,7 @@ export default {
         transition-duration: 0.2s;
         transition-property: transform;
         border-radius: 4px;
-        background-color: #fff;
+        background: $color-white;
 
         &:before, &:after {
           display: block;
@@ -158,7 +155,7 @@ export default {
           transition-duration: 0.2s;
           transition-property: transform;
           border-radius: 4px;
-          background-color: #fff;
+          background: $color-white;
         }
         &:before {
           transition: top 75ms ease .12s,opacity 75ms ease;
@@ -174,10 +171,10 @@ export default {
     &.open {
       .burger-wrapper {
         .burger {
-          transition-delay: 0.16s;
+          transition-delay: 0.06s;
           transition-timing-function: cubic-bezier(.215,.61,.355,1);
           transform: rotate(45deg);
-          background-color: #fff;
+          background: $color-white;
 
           &:before {
             top: 0;
@@ -191,6 +188,15 @@ export default {
           }
         }
       }
+    }
+
+    &:hover {
+      .burger-wrapper .burger {
+          background: $color-red;
+          &:before, &:after {
+            background: $color-red;
+          }
+        }
     }
   }
 
