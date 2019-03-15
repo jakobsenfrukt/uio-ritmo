@@ -241,14 +241,14 @@ export default {
     }
 
     li {
-      margin-left: 1rem;
+      margin-left: 0.2rem;
       &:before {
         content: " ";
         display: inline-block;
         width: 0.4rem;
         height: 0.4rem;
         background: $color-red;
-        border-radius: 50%;
+        border-radius: 0.4rem;
         margin-right: 0.6rem;
       }
       
@@ -264,6 +264,24 @@ export default {
       &:hover {
         text-decoration: underline;
       }
+    }
+
+    /* ritmo specific style */
+    li:before {
+      transition: width .1s ease-in-out;
+    }
+    li:hover {
+      &:before {
+        width: 1rem;
+        height: 0.4rem;
+        background: $color-red;
+        border-radius: 0.4rem;
+        margin-right: 0.6rem;
+        transition: width .1s ease-in-out;
+      }
+    }
+    a:hover {
+      text-decoration: none;
     }
   }
 }

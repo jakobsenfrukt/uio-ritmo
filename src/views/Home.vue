@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home" id="toc1">
     <transition name="fade" appear>
       <Hero
         video="/images/logo/logo-anim-white.mp4"
