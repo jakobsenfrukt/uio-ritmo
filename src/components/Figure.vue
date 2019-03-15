@@ -38,6 +38,12 @@ div {
     width: 100%;
   }
 
+  &.small {
+    width: $width-xs;
+    float: right;
+    margin: 1rem 2rem 2rem;
+  }
+
   &.column {
     width: $width-s;
 
