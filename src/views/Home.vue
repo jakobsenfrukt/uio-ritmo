@@ -24,7 +24,7 @@
     <Figure
       image="/images/infographics/RITMO-Matrise.svg"
       alt="Bildet viser no greier"
-      size="column"
+      size="small"
     />
     <Figure
       image="/images/infographics/RITMO-Partners-land.svg"
@@ -50,11 +50,6 @@
       video="/images/logo/logo-anim-white.mp4"
       size="column"
     />
-    <div class="download item">
-      <div class="inner">
-        Last ned hele publikasjonen (PDF)
-      </div>
-    </div>
     <section id="end" class="text item background people">
       <h3>Ansatte</h3>
       <ul>

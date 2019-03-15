@@ -8,16 +8,21 @@
             <!--<li><router-link to="/">Home</router-link></li>-->
             <h3>Annual Report 2018</h3>
             <span class="subhead">RITMO - Centre for Interdisciplinary Studies in Rhythm, Time and Motion</span>
-            <li><a href="#" v-scroll-to="{ el: '#intro', onStart: togglemenu }">Introduksjon</a></li>
-            <li>
-              <a href="#" v-scroll-to="{ el: '#part1', onStart: togglemenu }">Hva er RITMO?</a>
-              <ul>
-                <li><a href="#" v-scroll-to="{ el: '#part2', onStart: togglemenu }">Rytme</a></li>
-                <li><a href="#" v-scroll-to="{ el: '#part3', onStart: togglemenu }">Tid</a></li>
-                <li><a href="#" v-scroll-to="{ el: '#part4', onStart: togglemenu }">Bevegelse</a></li>
-              </ul>
-            </li>
-            <li><a href="#" v-scroll-to="'#end'">Ansatte</a></li>
+            <li><a href="#" v-scroll-to="{ el: '#toc1', onStart: togglemenu }">Intro</a></li>
+            <li><a href="#" v-scroll-to="{ el: '#toc2', onStart: togglemenu }">RITMO at a Glance</a></li>
+            <li><a href="#" v-scroll-to="{ el: '#toc3', onStart: togglemenu }">RITMO's Research Priorities</a></li>
+            <li><a href="#" v-scroll-to="{ el: '#toc4', onStart: togglemenu }">RITMO in Numbers</a></li>
+            <li><a href="#" v-scroll-to="{ el: '#toc5', onStart: togglemenu }">RITMO Highlights</a></li>
+            <li><a href="#" v-scroll-to="{ el: '#toc6', onStart: togglemenu }">RITMO Stories</a></li>
+            <li><a href="#" v-scroll-to="{ el: '#toc7', onStart: togglemenu }">RITMO Seminar Series</a></li>
+            <li><a href="#" v-scroll-to="{ el: '#toc8', onStart: togglemenu }">RITMO Behind the Scenes</a></li>
+            <li><a href="#" v-scroll-to="{ el: '#toc9', onStart: togglemenu }">RITMO's profile</a></li>
+            <li><a href="#" v-scroll-to="{ el: '#toc10', onStart: togglemenu }">Awards</a></li>
+            <li><a href="#" v-scroll-to="{ el: '#toc11', onStart: togglemenu }">Innovation Prize</a></li>
+            <li><a href="#" v-scroll-to="{ el: '#toc12', onStart: togglemenu }">Adacemy Membership</a></li>
+            <li><a href="#" v-scroll-to="{ el: '#toc13', onStart: togglemenu }">EUA Committee</a></li>
+            <li><a href="#" v-scroll-to="'#toc14'">RITMO People</a></li>
+            <li><a href="#" v-scroll-to="'#toc15'">International</a></li>
           </ul>
         </div>
         <div class="menu-toggle" :class="{ open: showmenu }" @click="togglemenu()">
@@ -194,6 +199,7 @@ export default {
     top: 3rem;
     right: 0;
     bottom: 0;
+    overflow-y: auto;
     z-index: 100;
     padding: 1rem;
     width: $width-xs;
