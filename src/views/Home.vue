@@ -133,6 +133,10 @@ export default {
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/moving-in/3d9a3071.jpg',
           caption: 'From before, RITMO\'s staff was located at three different departments and in three different buildings at the University of Oslo. The moving load was impressive! Bruno Laeng filled quite a few boxes.'
+        },
+        {
+          url:"https://www.hf.uio.no/ritmo/english/about/yearly-report/moving-in/3d9a3075.jpg",
+          caption: 'It was great to finally be co-located and working together in the same building. Centre director Anne Danielsen is unpacking one of the many boxes.'
         }
       ]
     }

@@ -79,4 +79,20 @@ div {
     height: 4rem;
   }
 }
+
+/* RITMO SPECIFIC STYLE */
+
+div {
+  figcaption {
+    padding: 1rem 3rem 1rem 2rem;
+    border-radius: 5rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    left: -1rem;
+    bottom: 1rem;
+    background-color: $color-white;
+    color: $color-blue;
+  }
+}
+
 </style>

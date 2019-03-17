@@ -24,7 +24,7 @@ section {
 
   &.background {
     background: rgba($color-theme, 0.3);
-    padding: 4rem 1rem;
+    padding-bottom: 4rem;
   }
 
   p:last-child {
@@ -53,17 +53,16 @@ h2 {
 
   &.section-heading {
     padding-top: 4rem;
-    position: relative;
     &:before {
       content: " ";
       display: block;
       position: absolute;
-      top: 88%;
-      left: -1em;
-      width: 0.2em;
-      height: 0.2em;
+      top: 7.3rem;
+      left: -0.3em;
+      width: 0.3em;
+      height: 0.3em;
       background: $color-red;
-      border-radius: 0.2em;
+      border-radius: 0.3em;
       margin-right: 0.6em;
       z-index: -1;
       transition: width 1s ease-in-out;
