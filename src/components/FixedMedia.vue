@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'Figure',
+  name: 'FixedMedia',
   props: {
     image: String,
     captions: Array,

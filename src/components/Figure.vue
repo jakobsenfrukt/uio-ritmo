@@ -146,7 +146,7 @@ div {
     display: block;
     font-style: italic;
     text-align: right;
-    font-family: sans-serif;
+    font-family: $sans-serif;
   }
 
   @media (max-width: $media-s) {

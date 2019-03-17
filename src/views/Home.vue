@@ -60,6 +60,7 @@
     <section id="toc5" class="toc text item">
       <h2 class="section-heading">RITMO Highlights</h2>
     </section>
+    <ImageGallery :images="gallery1" />
     <section id="toc6" class="toc text item">
       <h2 class="section-heading">RITMO Stories</h2>
     </section>
@@ -115,6 +116,7 @@ import Hero from '@/components/Hero.vue'
 import Video from '@/components/Video.vue'
 import Figure from '@/components/Figure.vue'
 import PersonList from '@/components/PersonList.vue'
+import ImageGallery from '@/components/ImageGallery.vue'
 
 export default {
   name: 'home',
@@ -122,7 +124,18 @@ export default {
     Hero,
     Video,
     Figure,
-    PersonList
+    PersonList,
+    ImageGallery
+  },
+  data: function() {
+    return {
+      gallery1: [
+        {
+          url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/moving-in/3d9a3071.jpg',
+          caption: 'From before, RITMO\'s staff was located at three different departments and in three different buildings at the University of Oslo. The moving load was impressive! Bruno Laeng filled quite a few boxes.'
+        }
+      ]
+    }
   }
 }
 </script>
