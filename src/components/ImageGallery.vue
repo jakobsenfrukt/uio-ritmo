@@ -1,18 +1,22 @@
 <template>
   <section class="gallery">
-    <div v-for="(image, index) in images" class="figure item" :key="`image-${index}`">
+    <div class="figure item">
       <figure>
-        <img :src="image.url" />
+        <img :src="images[currentImage].url" />
         <div class="caption-wrapper">
           <figcaption>
-            {{ image.caption }}
+            {{ images[currentImage].caption }}
             <span class="photoby">Foto: Svein Stølen</span>
           </figcaption>
         </div>
       </figure>
     </div>
     <nav class="gallery-nav">
-      <img v-for="(image, index) in images" :key="`image-${index}`" :src="image.url" />
+      <img v-for="(image, index) in images" :key="`image-${index}`" :src="image.url" @click="changeImage(index)" />
+    </nav>
+    <nav class="pagination">
+      <div class="previous" @click="currentImage > 0 ? currentImage-- : null">prev</div>
+      <div class="next" @click="currentImage < images.length-1 ? currentImage++ : null">next</div>
     </nav>
   </section>
 </template>
@@ -22,6 +26,16 @@ export default {
   name: 'ImageGallery',
   props: {
     images: Array
+  },
+  data: function() {
+    return {
+      currentImage: 0
+    }
+  },
+  methods: {
+    changeImage: function(index) {
+      this.currentImage = index;
+    }
   }
 }
 </script>
@@ -57,9 +71,10 @@ div {
 
   figcaption {
     padding: 0.6rem 1rem;
-    max-width: $width-s;
+    width: $width-s;
     margin: 0;
     position: absolute;
+    max-width: 90%;
     bottom: 0;
     background: $color-black;
     color: $color-white;
@@ -77,6 +92,14 @@ div {
   img {
     width: 4rem;
     height: 4rem;
+    margin-right: 1rem;
+    &:last-child {
+      margin-right: 0;
+    }
+    cursor: pointer;
+    &:hover {
+      opacity: 0.6;
+    }
   }
 }
 
