@@ -20,5 +20,9 @@
   &.inview {
     opacity: 1;
     transform: translateY(0);
+
+    .section-heading:before {
+      width: 3.8em;
+    }
   }
 }

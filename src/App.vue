@@ -8,18 +8,18 @@
             <!--<li><router-link to="/">Home</router-link></li>-->
             <h3>Annual Report 2018</h3>
             <span class="subhead">RITMO - Centre for Interdisciplinary Studies in Rhythm, Time and Motion</span>
-            <li><a href="#" v-scroll-to="{ el: '#toc1', onStart: togglemenu }">Intro</a></li>
-            <li><a href="#" v-scroll-to="{ el: '#toc2', onStart: togglemenu }">RITMO at a Glance</a></li>
-            <li><a href="#" v-scroll-to="{ el: '#toc3', onStart: togglemenu }">RITMO's Research Priorities</a></li>
-            <li><a href="#" v-scroll-to="{ el: '#toc4', onStart: togglemenu }">RITMO in Numbers</a></li>
-            <li><a href="#" v-scroll-to="{ el: '#toc5', onStart: togglemenu }">RITMO Highlights</a></li>
-            <li><a href="#" v-scroll-to="{ el: '#toc6', onStart: togglemenu }">RITMO Stories</a></li>
-            <li><a href="#" v-scroll-to="{ el: '#toc7', onStart: togglemenu }">RITMO Seminar Series</a></li>
-            <li><a href="#" v-scroll-to="{ el: '#toc8', onStart: togglemenu }">RITMO Behind the Scenes</a></li>
-            <li><a href="#" v-scroll-to="{ el: '#toc9', onStart: togglemenu }">RITMO's profile</a></li>
-            <li><a href="#" v-scroll-to="{ el: '#toc10', onStart: togglemenu }">Awards</a></li>
-            <li><a href="#" v-scroll-to="'#toc11'">RITMO People</a></li>
-            <li><a href="#" v-scroll-to="'#toc12'">International</a></li>
+            <li><a href="#" id="toc1-link" class="toc-link-active" v-scroll-to="{ el: '#toc1', onStart: togglemenu }">Intro</a></li>
+            <li><a href="#" id="toc2-link" v-scroll-to="{ el: '#toc2', onStart: togglemenu }">RITMO at a Glance</a></li>
+            <li><a href="#" id="toc3-link" v-scroll-to="{ el: '#toc3', onStart: togglemenu }">RITMO's Research Priorities</a></li>
+            <li><a href="#" id="toc4-link" v-scroll-to="{ el: '#toc4', onStart: togglemenu }">RITMO in Numbers</a></li>
+            <li><a href="#" id="toc5-link" v-scroll-to="{ el: '#toc5', onStart: togglemenu }">RITMO Highlights</a></li>
+            <li><a href="#" id="toc6-link" v-scroll-to="{ el: '#toc6', onStart: togglemenu }">RITMO Stories</a></li>
+            <li><a href="#" id="toc7-link" v-scroll-to="{ el: '#toc7', onStart: togglemenu }">RITMO Seminar Series</a></li>
+            <li><a href="#" id="toc8-link" v-scroll-to="{ el: '#toc8', onStart: togglemenu }">RITMO Behind the Scenes</a></li>
+            <li><a href="#" id="toc9-link" v-scroll-to="{ el: '#toc9', onStart: togglemenu }">RITMO's profile</a></li>
+            <li><a href="#" id="toc10-link" v-scroll-to="{ el: '#toc10', onStart: togglemenu }">Awards</a></li>
+            <li><a href="#" id="toc11-link" v-scroll-to="'#toc11'">RITMO People</a></li>
+            <li><a href="#" id="toc12-link" v-scroll-to="'#toc12'">International</a></li>
           </ul>
         </div>
         <div class="menu-toggle" :class="{ open: showmenu }" @click="togglemenu()">
@@ -55,16 +55,38 @@ export default {
       this.showmenu = !this.showmenu;
     },
     handleScroll: function() {
+      this.fadeIn();
+      this.updateMenu();
+    },
+    fadeIn: function() {
       const items = document.querySelectorAll('.item');
       for (const item of items) {
         if (item.getBoundingClientRect().top <= window.innerHeight * 0.8 && item.getBoundingClientRect().top > 0) {
           item.classList.add('inview');
         }
       }
+    },
+    updateMenu() {
+      const chapters = document.querySelectorAll('.toc');
+      for (const chapter of chapters) {
+        if (chapter.getBoundingClientRect().top <= window.innerHeight * 0.5 || chapter.getBoundingClientRect().bottom < window.innerHeight * 0.5) {
+          document.querySelector('.toc-inview').classList.remove('toc-inview');
+          chapter.classList.add('toc-inview');
+          const chapterId = chapter.getAttribute('id');
+          const menu = document.querySelectorAll('#main-menu ul li a');
+          for (const menuItem of menu) {
+            if (menuItem.id === chapterId + '-link') {
+              document.querySelector('.toc-link-active').classList.remove('toc-link-active');
+              menuItem.classList.add('toc-link-active');
+            }
+          }
+        }
+      }
     }
   },
   created() {
     window.addEventListener('scroll', this.handleScroll)
+    this.updateMenu();
   },
   destroyed() {
     window.removeEventListener('scroll', this.handleScroll)
@@ -248,17 +270,7 @@ export default {
 
     li {
       margin-left: 0.2rem;
-      &:before {
-        content: " ";
-        display: inline-block;
-        width: 0.4rem;
-        height: 0.4rem;
-        background: $color-red;
-        border-radius: 0.4rem;
-        margin-right: 0.6rem;
-      }
       
-
       ul {
         margin-top: 0.6rem;
         font-size: 1rem;
@@ -270,24 +282,35 @@ export default {
       &:hover {
         text-decoration: underline;
       }
+      &:before {
+        content: " ";
+        display: inline-block;
+        width: 0.4rem;
+        height: 0.4rem;
+        background: $color-turquoise;
+        border-radius: 0.4rem;
+        margin-right: 0.6rem;
+      }
+      &.toc-link-active {
+        &:before {
+          background: $color-red;
+        }
+      }
     }
 
     /* ritmo specific style */
-    li:before {
+    a:before {
       transition: width .1s ease-in-out;
     }
-    li:hover {
+    a:hover {
+      text-decoration: none;
       &:before {
         width: 1rem;
         height: 0.4rem;
-        background: $color-red;
         border-radius: 0.4rem;
         margin-right: 0.6rem;
         transition: width .1s ease-in-out;
       }
-    }
-    a:hover {
-      text-decoration: none;
     }
   }
 }

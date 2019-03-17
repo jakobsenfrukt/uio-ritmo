@@ -1,6 +1,6 @@
 <template>
-  <section class="text item background people">
-    <h3>Ansatte</h3>
+  <section class="text item people">
+    <h3 v-if="heading">{{ heading }}</h3>
     <div class="person-list">
       <Person
         image="https://pbs.twimg.com/profile_images/941101314938949638/wc2T0MFY_400x400.jpg"
@@ -17,6 +17,9 @@ export default {
   name: 'PersonList',
   components: {
     Person
+  },
+  props: {
+    heading: String
   }
 }
 </script>

@@ -31,7 +31,7 @@ export default {
 @import '@/css/variables.scss';
 
 .hero {
-  margin: 0 auto 2rem;
+  margin: 2rem auto 2rem;
   position: relative;
   min-height: 60vh;
 
@@ -55,6 +55,7 @@ export default {
   h1 {
     font-size: 5rem;
     margin-bottom: 0;
+    line-height: 1;
   }
   .subhead {
     font-size: 1.6rem;
@@ -64,8 +65,16 @@ export default {
   }
 
   @media (max-width: $media-s) {
+    padding-top: 4rem;
+    min-height: 60vh;
+    img, video {
+      padding-bottom: 1rem;
+    }
     .text {
       padding: 0 1rem;
+    }
+    h1 {
+      font-size: 4rem;
     }
   }
 }

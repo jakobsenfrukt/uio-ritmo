@@ -1,5 +1,5 @@
 <template>
-  <div class="home" id="toc1">
+  <div class="home toc toc-inview" id="toc1">
     <transition name="fade" appear>
       <Hero
         video="/images/logo/logo-anim-white.mp4"
@@ -21,8 +21,8 @@
       alt="Bevegelse i dans"
       size="full"
     />
-    <section id="toc2" class="text item">
-      <h2>RITMO at a Glance</h2>
+    <section id="toc2" class="toc text item">
+      <h2 class="section-heading">RITMO at a Glance</h2>
       <p>Rhythm is omnipresent in human life, as we walk, talk, dance and play; as we tell stories about our past; and as we predict the future. Rhythm is also central to human biology, from the oscillations of our nervous system to our heartbeats, breathing patterns and longer chronobiological cycles. As such, it is a key aspect of human action and perception that is in complex interplay with the various cultural, biological and mechanical rhythms of the world.</p>
       <p>RITMO undertakes research on rhythm in human action and perception, using music, motion and audio-visual media as empirical points of departure. Our core idea is that the human ability to experience the world and our actions as rhythmic, points to basic perceptual and cognitive mechanisms that are in themselves rhythmic in nature. <strong>The vision of RITMO</strong> is to understand more about these mechanisms, and through this generate new knowledge about the ways in which humans structure and understand the temporal dimensions of their life.</p>
       <p>The centre is interdisciplinary and combines perspectives and methods from music and media studies, philosophy and aesthetics, cognitive neuroscience, and informatics, using state-of-the-art technologies for motion capture, neuroimaging, pupillometry and robotics.</p>
@@ -41,59 +41,60 @@
     <section class="text item">
       <h3>Motion</h3>
     </section>
-    <section id="toc3" class="text item">
-      <h2>RITMO's Research Priorities</h2>
+    <section id="toc3" class="toc text item">
+      <h2 class="section-heading">RITMO's Research Priorities</h2>
     </section>
     <Figure
       image="/images/infographics/RITMO-Matrise.svg"
       alt="Bildet viser no greier"
       size="column"
     />
-    <section id="toc4" class="text item">
-      <h2>RITMO in Numbers</h2>
+    <section id="toc4" class="toc text item">
+      <h2 class="section-heading">RITMO in Numbers</h2>
     </section>
     <Figure
       image="/images/infographics/RITMO-Results.svg"
       alt="Bildet viser no greier"
       size="column"
     />
-    <section id="toc5" class="text item">
-      <h2>RITMO Highlights</h2>
+    <section id="toc5" class="toc text item">
+      <h2 class="section-heading">RITMO Highlights</h2>
     </section>
-    <section id="toc6" class="text item">
-      <h2>RITMO Stories</h2>
+    <section id="toc6" class="toc text item">
+      <h2 class="section-heading">RITMO Stories</h2>
     </section>
     <Video
       video="/images/logo/logo-anim-white.mp4"
       size="column"
     />
-    <section id="toc7" class="text item">
-      <h2>RITMO Seminar Series</h2>
+    <section id="toc7" class="toc text item">
+      <h2 class="section-heading">RITMO Seminar Series</h2>
     </section>
-    <section id="toc8" class="text item">
-      <h2>RITMO Behind the Scenes</h2>
+    <section id="toc8" class="toc text item">
+      <h2 class="section-heading">RITMO Behind the Scenes</h2>
     </section>
-    <section id="toc9" class="text item">
-      <h2>RITMO's Profile</h2>
+    <section id="toc9" class="toc text item">
+      <h2 class="section-heading">RITMO's Profile</h2>
     </section>
-    <section id="toc10" class="text item">
-      <h2>Awards</h2>
+    <section id="toc10" class="toc text item background">
+      <h2 class="section-heading">Awards</h2>
     </section>
     <Figure
       image="https://www.hf.uio.no/ritmo/english/news-and-events/events/conferences/2018/ritmo-largo/photos/annica-thomson/3d9a5031.jpg"
       alt="The beautiful people of RITMO together on a stage"
       size="full"
     />
-    <section id="toc11" class="text item">
-      <h2>RITMO People</h2>
+    <section id="toc11" class="toc text item">
+      <h2 class="section-heading">RITMO People</h2>
     </section>
     <Figure
       image="/images/infographics/RITMO-People-kjonn.svg"
       alt="Bildet viser no greier"
       size="column"
     />
+    <PersonList heading="Scientific Advisory Board" />
     <section id="toc12" class="text item">
-      <h2>International</h2>
+      <h2 class="section-heading">International</h2>
     </section>
     <Figure
       image="/images/infographics/RITMO-Partners-land.svg"
@@ -105,7 +106,6 @@
       alt="Bildet viser no greier"
       size="column"
     />
-    <PersonList />
   </div>
 </template>
 
