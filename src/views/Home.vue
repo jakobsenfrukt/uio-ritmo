@@ -9,7 +9,7 @@
     </transition>
     <transition name="fadeup" appear>
       <section class="text">
-        <p>2018 was the year that RITMO went from idea to reality. Even though many things have changed since we first started planning RITMO in 2012, the core people, the main ideas, and the excitement of being part of something quite unique, is still there!</p>
+        <p class="lead">2018 was the year that RITMO went from idea to reality. Even though many things have changed since we first started planning RITMO in 2012, the core people, the main ideas, and the excitement of being part of something quite unique, is still there!</p>
         <p>One of the things we are most proud of, is the truly interdisciplinary nature of RITMO. Everyone is talking about the need to work across disciplines, but not so many really try to do this in practice. As Centre Directors we spent a lot of time in 2018 on building a solid administrative and organizational platform for a centre that spans three departments in three faculties. We are grateful for the support we have received from the University of Oslo throughout this process, and we believe that the establishment of RITMO has helped pave the way for future interdisciplinary initiatives.</p>
         <p>The most important part of RITMO is the people working here. Many people moved from their host departments to RITMO in August 2018, and soon after we welcomed the first group of new recruits as they arrived in September. It was fantastic to see our premises change from a construction site into a buzzing working environment in just a few months.</p>
         <p>2018 was the year of change, the year that RITMO came into being. Here we present some highlights from the year, in time, rhythm, and motion.</p>
@@ -52,7 +52,7 @@
     </section>
     <section id="toc3" class="toc text item">
       <h2 class="section-heading">RITMO's Research Priorities</h2>
-      <p>In addition to RITMO's organizational clusters and operational research groups described above, we also have four research priorities that influence and guides all the other activities:</p>
+      <p class="lead">In addition to RITMO's organizational clusters and operational research groups described above, we also have four research priorities that influence and guides all the other activities:</p>
       <p><strong>Structure</strong> concerns our ability to structure the past and predict future events, and to discern variation with regard to an underlying pattern.</p>
       <p>This, in turn, facilitates <strong>interaction</strong> with both other human beings and external events, which is crucial for example in synchronisation, conversation and bodily coordination.</p>
       <p>The research priority <strong>pleasure</strong> focuses on rhythm as a phenomenon related to social functions and well-being. Why do certain rhythms invite participation, such as dancing, while others do not.</p>
@@ -97,7 +97,7 @@
     />
     <section id="toc5" class="toc text item">
       <h2 class="section-heading">RITMO Highlights</h2>
-      <p>At a centre with more than 40 employees, there are always numerous things happening. In 2018 we were particularly proud of three things.</p>
+      <p class="lead">At a centre with more than 40 employees, there are always numerous things happening. In 2018 we were particularly proud of three things.</p>
     </section>
     <section class="text item">
       <h3>Moving in</h3>
@@ -114,7 +114,7 @@
     <ImageGallery :images="gallery3" />
     <section id="toc6" class="toc text item">
       <h2 class="section-heading">RITMO Stories</h2>
-      <p>A project is always more than what you can read from a project page. Hear some of RITMO's researchers present their own research.</p>
+      <p class="lead">A project is always more than what you can read from a project page. Hear some of RITMO's researchers present their own research.</p>
     </section>
     <Youtube
       video="https://www.youtube.com/embed?v=azbx0tI2OSE"
@@ -122,29 +122,34 @@
     />
     <section id="toc7" class="toc text item">
       <h2 class="section-heading">RITMO Seminar Series</h2>
-      <p>In 2018 we started up the RITMO Seminar Series as a venue for presenting world-leading scholars from around the world. These events are open to the public, and have attracted participants from all over the Oslo area.</p>
+      <p class="lead">In 2018 we started up the RITMO Seminar Series as a venue for presenting world-leading scholars from around the world. These events are open to the public, and have attracted participants from all over the Oslo area.</p>
     </section>
     <section id="toc8" class="toc text item">
       <h2 class="section-heading">RITMO Behind the Scenes</h2>
-      <p>To the people working at RITMO, the Centre is so much more than just a working space. Even though the everyday life at the center evolves around topics of research and work, the treshold for socialising and laughing are low, which creates a warm nergetic environment for the staff.</p>
+      <p class="lead">To the people working at RITMO, the Centre is so much more than just a working space. Even though the everyday life at the center evolves around topics of research and work, the treshold for socialising and laughing are low, which creates a warm nergetic environment for the staff.</p>
     </section>
     <section id="toc9" class="toc text item">
       <h2 class="section-heading">RITMO's Profile</h2>
-      <p>It was clear from the start that RITMO could not only have a static, visual profile. After all, RITMO is about time, rhythm, and motion, and we wanted this to come through in our physical and digital appearance. The solution was to engage in a creative process with the design company Anagram and the composer Jon Balke. The end result is a sonic-visual profile that captures some of the creative spirit of RITMO, and that can be reconfigured endlessly.</p>
+      <p class="lead">It was clear from the start that RITMO could not only have a static, visual profile. After all, RITMO is about time, rhythm, and motion, and we wanted this to come through in our physical and digital appearance.</p>
+      <p>The solution was to engage in a creative process with the design company Anagram and the composer Jon Balke. The end result is a sonic-visual profile that captures some of the creative spirit of RITMO, and that can be reconfigured endlessly.</p>
     </section>
     <section id="toc10" class="toc text item background">
       <h2 class="section-heading">Awards</h2>
+    </section>
+    <section id="toc11" class="toc text item">
+      <h2 class="section-heading">RITMO People</h2>
+      <p class="lead">The people are the most important part of RITMO.</p>
     </section>
     <Figure
       image="https://www.hf.uio.no/ritmo/english/news-and-events/events/conferences/2018/ritmo-largo/photos/annica-thomson/3d9a5031.jpg"
       alt="The beautiful people of RITMO together on a stage"
       size="full"
     />
-    <section id="toc11" class="toc text item">
-      <h2 class="section-heading">RITMO People</h2>
+    <section class="text item">
+      <h3>Scientific Advisory Board</h3>
       <p>The members of RITMO's Scientific Advisory Board are highly acclaimed researchers within their respective fields. The Board is vital to providing feedback on on-going and future research, and its members have been carefully chosen to support the different parts of RITMO.</p>
     </section>
-    <PersonList heading="Scientific Advisory Board" />
+    <PersonList />
   </div>
 </template>
 
