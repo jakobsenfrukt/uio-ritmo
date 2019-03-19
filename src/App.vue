@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header id="header" class="site-header">
-      <div class="logo">UiO</div>
+      <div class="logo"><img src="/uio-logo.svg" /></div>
       <nav class="site-nav">
         <div class="menu" :class="{ visible: showmenu }" id="main-menu">
           <ul>
@@ -98,23 +98,8 @@ export default {
 @import 'css/main.scss';
 
 .logo {
-  font-family: $serif;
   padding-right: 0.6rem;
   position: relative;
-  &:before, &:after {
-    content: " ";
-    display: block;
-    width: 0.32rem;
-    height: 0.32rem;
-    border-radius: 50%;
-    background: $color-red;
-    position: absolute;
-    top: 0.24rem;
-    right: 0;
-  }
-  &:after {
-    top: 0.7rem;
-  }
 }
 
 .site-header {

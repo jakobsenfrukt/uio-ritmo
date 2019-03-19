@@ -3,7 +3,7 @@
     <div class="figure item">
       <figure>
         <img :src="images[currentImage].url" />
-        <div class="caption-wrapper">
+        <div v-if="caption" class="caption-wrapper">
           <figcaption>
             {{ images[currentImage].caption }}
             <span class="photoby">Foto: Svein Stølen</span>
@@ -45,6 +45,8 @@ export default {
 .gallery {
   padding: 1rem;
   background: $color-black;
+  margin-bottom: 4rem;
+  position: relative;
 }
 div {
   margin: 0 auto;
@@ -57,7 +59,7 @@ div {
   }
 
   img {
-    height: 75vh;
+    height: 80vh;
     width: 100%;
     object-fit: cover;
     z-index: 1000;
@@ -103,6 +105,26 @@ div {
     &:hover {
       opacity: 0.6;
     }
+  }
+}
+
+.pagination {
+  div {
+    position: absolute;
+    top: calc(50% - 3rem);
+    width: 3rem;
+    height: 3rem;
+    background: $color-turquoise;
+    cursor: pointer;
+    &:hover {
+      background: $color-red;
+    }
+  }
+  .next {
+    right: 0;
+  }
+  .previous {
+    left: 0;
   }
 }
 
