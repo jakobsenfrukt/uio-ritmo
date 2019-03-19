@@ -43,7 +43,8 @@ export default {
 <style scoped lang="scss">
 @import '@/css/variables.scss';
 .gallery {
-  padding: 0;
+  padding: 1rem;
+  background: $color-black;
 }
 div {
   margin: 0 auto;
@@ -56,7 +57,7 @@ div {
   }
 
   img {
-    height: 80vh;
+    height: 75vh;
     width: 100%;
     object-fit: cover;
     z-index: 1000;
@@ -65,7 +66,7 @@ div {
   .caption-wrapper {
     position: absolute;
     top: 1rem;
-    left: 1rem; right: 1rem; bottom: 1rem;
+    left: 0; right: 0; bottom: 1rem;
     z-index: 1001;
   }
 
@@ -88,13 +89,15 @@ div {
   }
 }
 .gallery-nav {
-  padding: 1rem;
   img {
     width: 4rem;
     height: 4rem;
-    margin-right: 1rem;
+    margin: 0.5rem;
     &:last-child {
       margin-right: 0;
+    }
+    &:first-child {
+      margin-left: 0;
     }
     cursor: pointer;
     &:hover {
@@ -107,14 +110,15 @@ div {
 
 div {
   figcaption {
-    padding: 1rem 3rem 1rem 2rem;
-    border-radius: 5rem;
+    padding: 1rem 1rem 1rem 2rem;
+    border-radius: 1rem;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     left: -1rem;
     bottom: 1rem;
-    background-color: $color-white;
-    color: $color-blue;
+    background-color: $color-black;
+    color: $color-white;
+    font-family: $serif;
   }
 }
 
