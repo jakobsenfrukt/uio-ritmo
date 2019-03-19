@@ -15,8 +15,8 @@
       <img v-for="(image, index) in images" :key="`image-${index}`" :src="image.url" @click="changeImage(index)" />
     </nav>
     <nav class="pagination">
-      <div class="previous" @click="currentImage > 0 ? currentImage-- : null">prev</div>
-      <div class="next" @click="currentImage < images.length-1 ? currentImage++ : null">next</div>
+      <div class="pagination-button previous" @click="currentImage > 0 ? currentImage-- : null"><div class="arrow"></div></div>
+      <div class="pagination-button next" @click="currentImage < images.length-1 ? currentImage++ : null"><div class="arrow"></div></div>
     </nav>
   </section>
 </template>
@@ -43,8 +43,8 @@ export default {
 <style scoped lang="scss">
 @import '@/css/variables.scss';
 .gallery {
-  padding: 1rem;
-  background: $color-black;
+  padding: 0;
+  background: $color-white;
   margin-bottom: 4rem;
   position: relative;
 }
@@ -91,6 +91,7 @@ div {
   }
 }
 .gallery-nav {
+  padding: 0 1rem;
   img {
     width: 4rem;
     height: 4rem;
@@ -109,22 +110,57 @@ div {
 }
 
 .pagination {
-  div {
+  &-button {
     position: absolute;
     top: calc(50% - 3rem);
     width: 3rem;
     height: 3rem;
     background: $color-turquoise;
+    border-radius: 50%;
     cursor: pointer;
     &:hover {
       background: $color-red;
     }
+    .arrow {
+      width: 18px;
+      height: 20px;
+      border-width: 4px 4px 0 0;
+      border-style: solid;
+      margin: 1rem;
+      border-radius: 0 2px 0 0;
+      &:before, &:after {
+        content: "";
+        border-radius: 2px;
+        position: absolute;
+      }
+      &:before {
+        right: 0;
+        top: -3px;
+        width: 23px;
+        height: 4px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin: right top;
+        transform-origin: right top;
+        box-shadow: inset 0 0 0 32px;
+      }
+      &:after {
+        width: 4px;
+        height: 4px;
+        left: -2px;
+        top: -4px;
+        box-shadow: inset 0 0 0 32px, 16px 17px;
+      }
+    }
   }
   .next {
-    right: 0;
+    right: 0.5rem;
+    transform: rotate(45deg);
+
   }
   .previous {
-    left: 0;
+    left: 0.5rem;
+    transform: rotate(-135deg);
   }
 }
 

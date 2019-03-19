@@ -100,15 +100,15 @@
       <p class="lead">At a centre with more than 40 employees, there are always numerous things happening. In 2018 we were particularly proud of three things.</p>
     </section>
     <section class="text item">
-      <h3>Moving in</h3>
+      <h2>Moving in</h2>
     </section>
     <ImageGallery :images="gallery1" />
     <section class="text item">
-      <h3>RITMO Largo</h3>
+      <h2>RITMO Largo</h2>
     </section>
     <ImageGallery :images="gallery2" />
     <section class="text item">
-      <h3>RITMO International Motion Capture Workshop</h3>
+      <h2>RITMO International Motion Capture Workshop</h2>
       <p>A workshop for exploring advanced methods for capturing and analysing human music-related motion. <a href="https://www.hf.uio.no/ritmo/english/news-and-events/events/conferences/2018/motion-capture/index.html">Read more</a></p>
     </section>
     <ImageGallery :images="gallery3" />
@@ -128,6 +128,7 @@
       <h2 class="section-heading">RITMO Behind the Scenes</h2>
       <p class="lead">To the people working at RITMO, the Centre is so much more than just a working space. Even though the everyday life at the center evolves around topics of research and work, the treshold for socialising and laughing are low, which creates a warm nergetic environment for the staff.</p>
     </section>
+    <ImageGallery :images="gallery4" />
     <section id="toc9" class="toc text item">
       <h2 class="section-heading">RITMO's Profile</h2>
       <p class="lead">It was clear from the start that RITMO could not only have a static, visual profile. After all, RITMO is about time, rhythm, and motion, and we wanted this to come through in our physical and digital appearance.</p>
@@ -284,6 +285,20 @@ export default {
         },
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/mocap/5r0a9189.jpg'
+        }
+      ],
+      gallery4: [
+        {
+          url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/social/engo.png'
+        },
+        {
+          url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/social/engo2.png'
+        },
+        {
+          url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/social/engo3.png'
+        },
+        {
+          url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/social/julebord2.jpg'
         }
       ]
     }

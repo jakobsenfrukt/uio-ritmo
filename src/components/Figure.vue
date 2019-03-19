@@ -153,4 +153,16 @@ div {
     margin-bottom: 2rem;
   }
 }
+
+/* RITMO SPECIFIC STYLE */
+div figure figcaption {
+    padding: 0.6rem 1rem;
+    max-width: $width-s;
+    margin: 0 auto;
+    background: $color-white;
+    color: $color-black;
+
+    font-size: 1rem;
+    font-family: $serif;
+  }
 </style>

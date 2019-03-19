@@ -62,6 +62,7 @@ export default {
     line-height: 1.2;
     display: block;
     margin: 0.5rem 0 1.6rem;
+    color: $color-blue;
   }
 
   @media (max-width: $media-s) {

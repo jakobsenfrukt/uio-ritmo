@@ -40,6 +40,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: $width-s;
   margin: 0 auto 1.6rem;
   line-height: 1.13;
+  color: $color-blue;
 }
 
 h1 {
@@ -86,6 +87,15 @@ p {
     max-width: $width-m;
     margin-bottom: 4rem;
     font-weight: bold;
+    color: $color-blue;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    &:hover {
+      color: $color-red;
+    }
   }
 }
 
