@@ -160,9 +160,9 @@ div figure figcaption {
     max-width: $width-s;
     margin: 0 auto;
     background: $color-white;
-    color: $color-black;
 
     font-size: 1rem;
     font-family: $serif;
+    color: $color-blue;
   }
 </style>

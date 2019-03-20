@@ -17,6 +17,11 @@
       </section>
     </transition>
     <Figure
+      image="https://www.hf.uio.no/ritmo/english/about/yearly-report/images/danielsen-og-jensenius.jpg"
+      alt="Anne og Alexander"
+      size="column"
+    />
+    <Figure
       image="https://www.hf.uio.no/ritmo/english/research/time/colourbox18441910.jpg"
       alt="Bevegelse i dans"
       size="full"
@@ -38,33 +43,38 @@
       <p>We investigate rhythm at various temporal scales, from micro-rhythmic relationships at the millisecond level to patterns of rhythms unfolding over several seconds. We are particularly interested in complex rhythms, rhythmic variation (micro-rhythm), rhythm across modalities (hearing, vision and body motion) and cultural variation. We use qualitative, behavioral and neurophysiological methods, often combining them to shed light on the same questions from different angles.</p>
       <p>Our aim is to understand how rhythm underpins our ability to structure past and predict future events, and to identify the perceptual and cognitive mechanisms underlying the experience and execution of rhythm.</p>
     </section>
+    <Figure
+      image="https://www.hf.uio.no/ritmo/bilder/interaction-ritmo-303x230px-black.jpg"
+      alt="Bildet viser no greier"
+      size="column"
+    />
     <section class="text item">
       <h3>Time</h3>
       <p>The TIME research cluster addresses the ways in which rhythm impacts the structuring of temporal events beyond the ‘now’, that is, the extent to which rhythm plays a role in remembering and structuring longer time spans. We will also investigate the relationship between rhythm and the experience of fragmented time.</p>
       <p>A second priority is to investigate the temporality of experiences of pleasure and absorption, the fact that rhythm facilitates entrainment and synchronization, and the social dimensions of this aspect of rhythm. A related question is how philosophical, psychological, and historical explorations of time can be revisited through new interdisciplinary perspectives on the experience of rhythm.</p>
       <p>Our aim is to understand how rhythm underpins our ability to structure and remember large-scale formations of time, and to understand the related processes of pleasure and engagement.</p>
     </section>
+    <Figure
+      image="https://www.hf.uio.no/ritmo/bilder/time-ritmo-303x230px.jpg"
+      alt="Bildet viser no greier"
+      size="column"
+    />
     <section class="text item">
       <h3>Motion</h3>
       <p>The MOTION research cluster focuses on the analysis of human body rhythm and the synthesis of rhythms with machines. The aim is to understand more about the human body's internal and external rhythms and how rhythms can be used in interaction. It is also relevant to understand how music influences people's body motion, such as in dancing, but also when trying to stand still. Knowledge about the motion-inducing effects of music can then be used in the creation of interactive systems in which the music is controlled through the human body.</p>
       <p>The empirical work is done using various types of motion capture systems and physiological measurements. The analysis and synthesis parts also greatly involve computer-based analysis methods, and in particular different types of machine learning systems. The synthesis part includes both the creation of visual displays of motion (animations) and the creation and use of robots to create physical motion.</p>
       <p>The aim is to create basic knowledge that can be used in the development of advanced rhythmic human-robot interaction, such as in dancing.</p>
     </section>
+    <Figure
+      image="https://www.hf.uio.no/ritmo/bilder/structure-ritmo-303x230px.jpg"
+      alt="Bildet viser no greier"
+      size="column"
+    />
     <section id="toc3" class="toc text item">
       <h2 class="section-heading">RITMO's Research Priorities</h2>
       <p class="lead">In addition to RITMO's organizational clusters and operational research groups described above, we also have four research priorities that influence and guides all the other activities:</p>
-      <p><strong>Structure</strong> concerns our ability to structure the past and predict future events, and to discern variation with regard to an underlying pattern.</p>
-      <p>This, in turn, facilitates <strong>interaction</strong> with both other human beings and external events, which is crucial for example in synchronisation, conversation and bodily coordination.</p>
-      <p>The research priority <strong>pleasure</strong> focuses on rhythm as a phenomenon related to social functions and well-being. Why do certain rhythms invite participation, such as dancing, while others do not.</p>
-      <p>Underlying all of the other themes, is the topic of <strong>time</strong>, which addresses that rhythm also impacts the ordering of temporal events far beyond the ‘now’ of its perceptual and cognitive unfolding. Here the focus is rhythm’s role in ‘remembering’ large-scale formations of time.</p>
-      <p>RITMO will pursue these four overarching research priorities in three empirical fields&mdash;<em>music</em>, <em>motion</em>, and <em>audiovisual media</em>&mdash;which represent different but related modalities of rhythm.</p>
     </section>
-    <Figure
-      image="/images/infographics/RITMO-Matrise.svg"
-      alt="Bildet viser no greier"
-      size="column"
-      caption="Research priorities (hori­zontal) and empirical fields (vertical) that are investigated in RITMO."
-    />
+    <TwoColumn />
     <section id="toc4" class="toc text item">
       <h2 class="section-heading">RITMO in Numbers</h2>
     </section>
@@ -73,8 +83,8 @@
       alt="Bildet viser no greier"
       size="column"
     />
-    <Figure
-      image="/images/infographics/RITMO-People-kjonn.svg"
+    <Video
+      video="/images/infographics/RITMO-People-kjonn.mp4"
       alt="Bildet viser no greier"
       size="column"
     />
@@ -120,7 +130,7 @@
       video="https://www.youtube.com/embed?v=azbx0tI2OSE"
       size="column"
     />
-    <section id="toc7" class="toc text item">
+    <section id="toc7" class="toc text item background">
       <h2 class="section-heading">RITMO Seminar Series</h2>
       <p class="lead">In 2018 we started up the RITMO Seminar Series as a venue for presenting world-leading scholars from around the world. These events are open to the public, and have attracted participants from all over the Oslo area.</p>
     </section>
@@ -161,6 +171,8 @@ import Figure from '@/components/Figure.vue'
 import PersonList from '@/components/PersonList.vue'
 import ImageGallery from '@/components/ImageGallery.vue'
 import Youtube from '@/components/Youtube.vue'
+import TwoColumn from '@/components/TwoColumn.vue'
+import Video from '@/components/Video.vue'
 
 export default {
   name: 'home',
@@ -169,7 +181,9 @@ export default {
     Figure,
     PersonList,
     ImageGallery,
-    Youtube
+    Youtube,
+    TwoColumn,
+    Video
   },
   data: function() {
     return {

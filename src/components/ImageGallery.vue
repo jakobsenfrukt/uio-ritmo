@@ -3,7 +3,7 @@
     <div class="figure item">
       <figure>
         <img :src="images[currentImage].url" />
-        <div v-if="caption" class="caption-wrapper">
+        <div v-if="images[currentImage].caption" class="caption-wrapper">
           <figcaption>
             {{ images[currentImage].caption }}
             <span class="photoby">Foto: Svein Stølen</span>
@@ -12,7 +12,7 @@
       </figure>
     </div>
     <nav class="gallery-nav">
-      <img v-for="(image, index) in images" :key="`image-${index}`" :src="image.url" @click="changeImage(index)" />
+      <img v-for="(image, index) in images" :key="`image-${index}`" :src="image.url" @click="changeImage(index)" :class="currentImage === index ? 'active' : null" />
     </nav>
     <nav class="pagination">
       <div class="pagination-button previous" @click="currentImage > 0 ? currentImage-- : null"><div class="arrow"></div></div>
@@ -105,6 +105,9 @@ div {
     cursor: pointer;
     &:hover {
       opacity: 0.6;
+    }
+    &.active {
+      box-shadow: 0 0 0 0.2rem $color-turquoise;
     }
   }
 }
