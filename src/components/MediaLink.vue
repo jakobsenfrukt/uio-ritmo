@@ -17,8 +17,7 @@ export default {
     image: String,
     caption: String,
     alt: String,
-    size: String,
-    credit: String
+    size: String
   }
 }
 </script>

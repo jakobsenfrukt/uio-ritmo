@@ -78,47 +78,21 @@
     <section id="toc4" class="toc text item">
       <h2 class="section-heading">RITMO in Numbers</h2>
     </section>
-    <Figure
-      image="/images/infographics/RITMO-Results.svg"
-      alt="Bildet viser no greier"
-      size="column"
-    />
-    <Video
-      video="/images/infographics/RITMO-People-kjonn.mp4"
-      alt="Bildet viser no greier"
-      size="column"
-    />
-    <section class="text item">
-      <h3>The World at RITMO</h3>
-      <p>We are fortunate to have people from all over the world working at RITMO.</p>
-    </section>
-    <Figure
-      image="/images/infographics/RITMO-Partners-land.svg"
-      alt="Bildet viser no greier"
-      size="column"
-    />
-    <section class="text item">
-      <h3>RITMO in the World</h3>
-    </section>
-    <Figure
-      image="/images/infographics/RITMO-People-land.svg"
-      alt="Bildet viser no greier"
-      size="column"
-    />
+    <FixedGallery :media="gallery6" />
     <section id="toc5" class="toc text item">
       <h2 class="section-heading">RITMO Highlights</h2>
       <p class="lead">At a centre with more than 40 employees, there are always numerous things happening. In 2018 we were particularly proud of three things.</p>
     </section>
     <section class="text item">
-      <h2>Moving in</h2>
+      <h3>Moving in</h3>
     </section>
     <ImageGallery :images="gallery1" />
     <section class="text item">
-      <h2>RITMO Largo</h2>
+      <h3>RITMO Largo</h3>
     </section>
     <ImageGallery :images="gallery2" />
     <section class="text item">
-      <h2>RITMO International Motion Capture Workshop</h2>
+      <h3>RITMO International Motion Capture Workshop</h3>
       <p>A workshop for exploring advanced methods for capturing and analysing human music-related motion. <a href="https://www.hf.uio.no/ritmo/english/news-and-events/events/conferences/2018/motion-capture/index.html">Read more</a></p>
     </section>
     <ImageGallery :images="gallery3" />
@@ -127,7 +101,7 @@
       <p class="lead">A project is always more than what you can read from a project page. Hear some of RITMO's researchers present their own research.</p>
     </section>
     <Youtube
-      video="https://www.youtube.com/embed?v=azbx0tI2OSE"
+      video="https://www.youtube.com/embed/azbx0tI2OSE"
       size="column"
     />
     <section id="toc7" class="toc text item background">
@@ -144,6 +118,7 @@
       <p class="lead">It was clear from the start that RITMO could not only have a static, visual profile. After all, RITMO is about time, rhythm, and motion, and we wanted this to come through in our physical and digital appearance.</p>
       <p>The solution was to engage in a creative process with the design company Anagram and the composer Jon Balke. The end result is a sonic-visual profile that captures some of the creative spirit of RITMO, and that can be reconfigured endlessly.</p>
     </section>
+    <FixedGallery :media="gallery5" />
     <section id="toc10" class="toc text item background">
       <h2 class="section-heading">Awards</h2>
     </section>
@@ -172,7 +147,7 @@ import PersonList from '@/components/PersonList.vue'
 import ImageGallery from '@/components/ImageGallery.vue'
 import Youtube from '@/components/Youtube.vue'
 import TwoColumn from '@/components/TwoColumn.vue'
-import Video from '@/components/Video.vue'
+import FixedGallery from '@/components/FixedGallery.vue'
 
 export default {
   name: 'home',
@@ -183,119 +158,144 @@ export default {
     ImageGallery,
     Youtube,
     TwoColumn,
-    Video
+    FixedGallery
   },
   data: function() {
     return {
       gallery1: [
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/moving-in/3d9a3010.jpg',
-          caption: 'In August RITMO\'s staff moved into their new premises in Harald Schjelderups hus. Here Ragnhild Brøvig-Hanssen is filling the shelves in her new office.'
+          caption: 'In August RITMO\'s staff moved into their new premises in Harald Schjelderups hus. Here Ragnhild Brøvig-Hanssen is filling the shelves in her new office.',
+          credit: 'Photo: Annica Thomsson'
         },
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/moving-in/3d9a3071.jpg',
-          caption: 'From before, RITMO\'s staff was located at three different departments and in three different buildings at the University of Oslo. The moving load was impressive! Bruno Laeng filled quite a few boxes.'
+          caption: 'From before, RITMO\'s staff was located at three different departments and in three different buildings at the University of Oslo. The moving load was impressive! Bruno Laeng filled quite a few boxes.',
+          credit: 'Photo: Annica Thomsson'
         },
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/moving-in/3d9a3075.jpg',
-          caption: 'It was great to finally be co-located and working together in the same building. Centre director Anne Danielsen is unpacking one of the many boxes.'
+          caption: 'It was great to finally be co-located and working together in the same building. Centre director Anne Danielsen is unpacking one of the many boxes.',
+          credit: 'Photo: Annica Thomsson'
         },
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/moving-in/3d9a3103.jpg',
-          caption: 'The premises were refurbished during the spring and summer before RITMO could move in. This is going to be a shared office for PhDs and Postdocs.'
+          caption: 'The premises were refurbished during the spring and summer before RITMO could move in. This is going to be a shared office for PhDs and Postdocs.',
+          credit: 'Photo: Annica Thomsson'
         },
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/moving-in/3d9a3108.jpg',
-          caption: 'Once in a while we were a bit worried whether or not they would be finished in time for us to move in.'
+          caption: 'Once in a while we were a bit worried whether or not they would be finished in time for us to move in.',
+          credit: 'Photo: Annica Thomsson'
         },
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/moving-in/3d9a3122.jpg',
-          caption: 'Moving is hard work. Coffee and cinnamon buns were important to keep the spirit up!'
+          caption: 'Moving is hard work. Coffee and cinnamon buns were important to keep the spirit up!',
+          credit: 'Photo: Annica Thomsson'
         },
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/moving-in/3d9a3171.jpg',
-          caption: 'The RITMO staff had quite a job both packing and unpacking. Bruno Laeng and Ragnhild Brøvig-Hanssen are getting things in order.'
+          caption: 'The RITMO staff had quite a job both packing and unpacking. Bruno Laeng and Ragnhild Brøvig-Hanssen are getting things in order.',
+          credit: 'Photo: Annica Thomsson'
         },
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/moving-in/3d9a2928.jpg',
-          caption: 'Moving and working! Kristian Nymoen tries to get some work done during the moving process.'
+          caption: 'Moving and working! Kristian Nymoen tries to get some work done during the moving process.',
+          credit: 'Photo: Annica Thomsson'
         }
       ],
       gallery2: [
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/largo/3d9a5048.jpg',
-          caption: 'Liv Furuberg from the Research Council of Norway handed over the Centre of Excellence plaque to director Anne Danielsen.'
+          caption: 'Liv Furuberg from the Research Council of Norway handed over the Centre of Excellence plaque to director Anne Danielsen.',
+          credit: 'Photo: Annica Thomsson'
         },
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/largo/3d9a5149.jpg',
-          caption: 'Members of RITMO\'s Scientific Advisory Board and Faculty discussed the highly relevant subject of working across disciplinary borders.'
+          caption: 'Members of RITMO\'s Scientific Advisory Board and Faculty discussed the highly relevant subject of working across disciplinary borders.',
+          credit: 'Photo: Annica Thomsson'
         },
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/largo/3d9a5171.jpg',
-          caption: 'After the opening, everyone was invited to the grand reception.'
+          caption: 'After the opening, everyone was invited to the grand reception.',
+          credit: 'Photo: Annica Thomsson'
         },
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/largo/3d9a5219.jpg',
-          caption: 'In the evening the fun and celebration continued. MusicLab 3, organised by the University library in cooperation with RITMO, explored the phenomenon of rhythm - in music and in the body - all within MusicLab’s unique blend of research and edutainment. Solveig Isis Sørbø and Sophie Charlotte Barth wished everyone welcome.'
+          caption: 'In the evening the fun and celebration continued. MusicLab 3, organised by the University library in cooperation with RITMO, explored the phenomenon of rhythm - in music and in the body - all within MusicLab’s unique blend of research and edutainment. Solveig Isis Sørbø and Sophie Charlotte Barth wished everyone welcome.',
+          credit: 'Photo: Annica Thomsson'
         },
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/largo/3d9a5297.jpg',
-          caption: 'After the music-dance performance, rhythm was discussed by Professor Justin London, RITMO\'s director Anne Danielsen, Dancer-illustrator Katja Schia and DJ Filip Abramczyk. RITMO\'s deputy director, Alexander Refsum Jensenius, lead the discussion.'
+          caption: 'After the music-dance performance, rhythm was discussed by Professor Justin London, RITMO\'s director Anne Danielsen, Dancer-illustrator Katja Schia and DJ Filip Abramczyk. RITMO\'s deputy director, Alexander Refsum Jensenius, lead the discussion.',
+          credit: 'Photo: Annica Thomsson'
         },
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/largo/5r0a9325.jpg',
-          caption: 'Guests from all over the world joined in on the opening event.'
+          caption: 'Guests from all over the world joined in on the opening event.',
+          credit: 'Photo: Annica Thomsson'
         },
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/largo/3d9a4995.jpg',
-          caption: 'Batagraf set the tone for the official opening of RITMO.'
+          caption: 'Batagraf set the tone for the official opening of RITMO.',
+          credit: 'Photo: Annica Thomsson'
         },
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/largo/3d9a5247.jpg',
-          caption: 'Coding in action! Some of our researchers did live coding of movements to music. Here presented by Cagri Erdem and Qichao Lan analysing Katja Schias\' dance.'
+          caption: 'Coding in action! Some of our researchers did live coding of movements to music. Here presented by Cagri Erdem and Qichao Lan analysing Katja Schias\' dance.',
+          credit: 'Photo: Annica Thomsson'
         },
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/largo/3d9a5207.jpg',
-          caption: 'Good times! After months of planning the opening, a feast was welcome.'
+          caption: 'Good times! After months of planning the opening, a feast was welcome.',
+          credit: 'Photo: Annica Thomsson'
         },
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/largo/3d9a4973.jpg',
-          caption: 'UiO Rector Svein Stølen talks to RITMO Centre Directors Anne Danielsen and Alexander Refsum Jensenius.'
+          caption: 'UiO Rector Svein Stølen talks to RITMO Centre Directors Anne Danielsen and Alexander Refsum Jensenius.',
+          credit: 'Photo: Annica Thomsson'
         },
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/largo/3d9a5032.jpg',
-          caption: 'All our staff was invited to share the stage for the opening.'
+          caption: 'All our staff was invited to share the stage for the opening.',
+          credit: 'Photo: Annica Thomsson'
         }
       ],
       gallery3: [
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/mocap/3d9a4770.jpg',
-          caption: 'In connection with RITMO\'s official opening, the centre organized a international workshop on music-related motion capture 12-14 November. RITMO\'s administration is ready to welcome more than 50 experts from all over the world.'
+          caption: 'In connection with RITMO\'s official opening, the centre organized a international workshop on music-related motion capture 12-14 November. RITMO\'s administration is ready to welcome more than 50 experts from all over the world.',
+          credit: 'Photo: Annica Thomsson'
         },
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/mocap/3d9a4771.jpg',
-          caption: 'The program included keynotes by Marcelo M. Wanderley, Marc Leman and Peter Vuust, as well as panel discussions, hands-on sessions and toolbox tutorials.'
+          caption: 'The program included keynotes by Marcelo M. Wanderley, Marc Leman and Peter Vuust, as well as panel discussions, hands-on sessions and toolbox tutorials.',
+          credit: 'Photo: Annica Thomsson'
         },
         {
-          url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/mocap/3d9a4833.jpg'
+          url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/mocap/3d9a4833.jpg',
+          credit: 'Photo: Annica Thomsson'
         },
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/mocap/5r0a9015.jpg',
-          caption: 'The workshop also included a tour of RITMO\'s lab facilities. Here Bruno Laeng is presenting the pupillometry lab.'
+          caption: 'The workshop also included a tour of RITMO\'s lab facilities. Here Bruno Laeng is presenting the pupillometry lab.',
+          credit: 'Photo: Annica Thomsson'
         },
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/mocap/5r0a9034.jpg',
-          caption: 'During the lunch break there was time for lively discussions and for getting to know colleagues from all over the world.'
+          caption: 'During the lunch break there was time for lively discussions and for getting to know colleagues from all over the world.',
+          credit: 'Photo: Annica Thomsson'
         },
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/mocap/5r0a9097.jpg',
-          caption: 'There were hands-on sessions in the motion capture lab.'
+          caption: 'There were hands-on sessions in the motion capture lab.',
+          credit: 'Photo: Annica Thomsson'
         },
         {
-          url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/mocap/5r0a9134.jpg'
+          url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/mocap/5r0a9134.jpg',
         },
         {
-          url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/mocap/5r0a9140.jpg'
+          url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/mocap/5r0a9140.jpg',
         },
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/mocap/5r0a9189.jpg'
@@ -313,6 +313,52 @@ export default {
         },
         {
           url: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/social/julebord2.jpg'
+        }
+      ],
+      gallery5: [
+        {
+          image: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/images/ritmo-hovedmerke-290818.png',
+          heading: 'The Visual Profile',
+          caption: '«We have developed a visual mark/emblem based on the letter forms in the word RITMO, broken down to its smallest geometric constituents. The visual profile is a starting point consisting of flexible building blocks and some “rules“ for use, which can be varied indefinitely and generate new opinions, structures and constellations.»',
+          credit: 'Anagram'
+        },
+        {
+          youtube: 'https://www.youtube.com/embed/kcKZdvazPBQ',
+          heading: 'The Sonic Profile',
+          caption: '«The sonic profile is designed to match RITMO\'s organic bodily understanding of rhythms to a more psychological approach, via social and cultural aspects. It was important for me to create something that is not tied up in a locked sense of pace or groove, but represents a rhythmic force and a course that could be experienced dramaturgically.»',
+          credit: 'Jon Balke, Batagraf'
+        },
+        {
+          image: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/images/20181115_190400_320px.jpg',
+          heading: 'The Dynamic Profile',
+          caption: '«I was excited to be the first one to explore the re-configuration possibilities of the visual elements of RITMO\'s profile. The result, shown at RITMO Largo, was an interactive display of the visual elements projected on the floor. The elements reacted to the sound in the space. It was fascinating to see the elements come alive with people\'s talking and music playing, and I got many ideas for how to further develop the interaction.»',
+          credit: 'Julian Fuhrer, RITMO PhD student'
+        },
+      ],
+      gallery6: [
+        {
+          image: '/images/infographics/RITMO-Results.svg',
+          heading: 'RITMO Publications',
+          caption: 'All RITMO publications in the first year.',
+          link: {
+            url: '#',
+            text: 'List of all RITMO publications'
+          }
+        },
+        {
+          video: '/images/infographics/RITMO-People-kjonn.mp4',
+          heading: 'The People of RITMO',
+          caption: 'RITMO consists of 61 people in total: 26 women and 34 men.'
+        },
+        {
+          image: '/images/infographics/RITMO-People-land.svg',
+          heading: 'The World at RITMO',
+          caption: 'We are fortunate to have people from all over the world working at RITMO. Currently, we have people from: Argentina, Australia, Brazil, Columbia, Denmark, Finland, France, Greece, India, Italy, China, Mexico, Montenegro, Norway, Poland, Great Britain, Turkey, Germany, and USA.'
+        },
+        {
+          image: '/images/infographics/RITMO-Partners-land.svg',
+          heading: 'RITMO in the World',
+          caption: 'Argentina, Belgium, Brazil, Canada, Switzerland, Germany, Denmark, Spain, Finland, France, United Kingdom, Israel, India, Iceland, Italy, Japan, Netherlands, Sweden, USA.'
         }
       ]
     }

@@ -1,12 +1,12 @@
 <template>
-  <section class="gallery">
-    <div class="figure item">
+  <section class="gallery item">
+    <div class="figure">
       <figure>
         <img :src="images[currentImage].url" />
         <div v-if="images[currentImage].caption" class="caption-wrapper">
           <figcaption>
             {{ images[currentImage].caption }}
-            <span class="photoby">Foto: Svein Stølen</span>
+            <span v-if="images[currentImage].credit" class="credit">{{ images[currentImage].credit }}</span>
           </figcaption>
         </div>
       </figure>
@@ -82,7 +82,7 @@ div {
     background: $color-black;
     color: $color-white;
   }
-  .photoby {
+  .credit {
     font-size: $font-xs;
     display: block;
     font-style: italic;
@@ -115,6 +115,7 @@ div {
 .pagination {
   &-button {
     position: absolute;
+    z-index: 2000;
     top: calc(50% - 3rem);
     width: 3rem;
     height: 3rem;

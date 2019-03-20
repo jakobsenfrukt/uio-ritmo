@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'Video',
+  name: 'Youtube',
   props: {
     video: String,
     caption: String,
