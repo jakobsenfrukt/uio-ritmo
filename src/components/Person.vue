@@ -2,7 +2,7 @@
   <div class="person">
     <img :src="image" />
     <h3 class="name">
-      <a v-if="url" :href="url">{{ name }}</a>
+      <a v-if="link" :href="link">{{ name }}</a>
       <template v-else>{{ name }}</template>
     </h3>
     <p class="bio">{{ bio }}</p>
@@ -16,7 +16,7 @@ export default {
     image: String,
     name: String,
     bio: String,
-    url: String
+    link: String
   }
 }
 </script>
@@ -25,15 +25,20 @@ export default {
 @import '@/css/variables.scss';
 
 .person {
-  width: 28%;
+  width: 20%;
+  padding-right: 2rem;
   img {
-    width: 80%;
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+    object-position: 50% 0;
     border-radius: 50%;
     margin-bottom: 1rem;
+    border: 0.1rem solid $color-blue;
   }
 
   .name {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 0 0 0.6rem;
 
     a {
@@ -43,7 +48,7 @@ export default {
   }
 
   .bio {
-    font-size: 0.8rem;
+    font-size: $font-xs;
   }
 
   @media (max-width: $media-s) {

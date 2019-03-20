@@ -135,7 +135,9 @@
       <h3>Scientific Advisory Board</h3>
       <p>The members of RITMO's Scientific Advisory Board are highly acclaimed researchers within their respective fields. The Board is vital to providing feedback on on-going and future research, and its members have been carefully chosen to support the different parts of RITMO.</p>
     </section>
-    <PersonList />
+    <PersonList :people="people1" />
+    <PersonList :people="people2" heading="Steering Committee" />
+    <PersonList :people="people3" heading="Management" />
   </div>
 </template>
 
@@ -359,6 +361,176 @@ export default {
           image: '/images/infographics/RITMO-Partners-land.svg',
           heading: 'RITMO in the World',
           caption: 'Argentina, Belgium, Brazil, Canada, Switzerland, Germany, Denmark, Spain, Finland, France, United Kingdom, Israel, India, Iceland, Italy, Japan, Netherlands, Sweden, USA.'
+        }
+      ],
+      people1: [
+        {
+          image: 'https://www.hf.uio.no/ritmo/english/about/organisation/sab/georgina-born.jpg',
+          name: 'Georgina Born',
+          link: 'http://www.music.ox.ac.uk/about/people/academic-staff/university-lecturers-and-college-fellows/georgina-born/',
+          bio: 'Professor of Music and Anthropology at the Faculty of Music, University of Oxford.'
+        },
+        {
+          image: 'https://www.hf.uio.no/ritmo/english/about/organisation/sab/nicholas-cook.jpg',
+          name: 'Nicholas Cook',
+          link: 'https://www.mus.cam.ac.uk/directory/nicholas-cook',
+          bio: 'Professor of Music at the Faculty of Music, University of Cambridge.'
+        },
+        {
+          image: 'https://www.hf.uio.no/ritmo/english/about/organisation/sab/bilder/nikkidweb.jpg',
+          name: 'Nicola Dibben',
+          link: 'https://www.sheffield.ac.uk/music/staff/academic/ndibben/index',
+          bio: 'Professor in the Department of Music, University of Sheffield.'
+        },
+        {
+          image: 'https://www.hf.uio.no/ritmo/english/about/organisation/sab/bilder/rebecca_fiebrink.jpg',
+          name: 'Rebecca Fiebrink',
+          link: 'https://www.doc.gold.ac.uk/~mas01rf/homepage/',
+          bio: 'Senior Lecturer in Computing at Goldsmiths, University of London.'
+        },
+        {
+          image: 'https://www.hf.uio.no/ritmo/english/about/organisation/sab/bilder/robert_knight.jpg',
+          name: 'Robert T. Knight',
+          link: 'https://psychology.berkeley.edu/people/robert-t-knight',
+          bio: 'Professor of Psychology and Neuroscience at Berkeley, University of California.'
+        },
+        {
+          image: 'https://www.hf.uio.no/ritmo/english/about/organisation/sab/serge-lacasse.jpg',
+          name: 'Serge Lacasse',
+          link: 'https://www.mus.ulaval.ca/notice.php?id=29',
+          bio: 'Professor in Musicology at Université Laval.'
+        },
+        {
+          image: 'https://www.hf.uio.no/ritmo/english/about/organisation/sab/marc-leman.jpg',
+          name: 'Marc Leman',
+          link: 'https://research.flw.ugent.be/en/marc.leman',
+          bio: 'Professor in systematic musicology and director of IPEM at Ghent University.'
+        },
+        {
+          image: 'https://www.hf.uio.no/ritmo/english/about/organisation/sab/xavier-serra.jpg',
+          name: 'Xavier Serra',
+          link: 'https://www.upf.edu/web/xavier-serra',
+          bio: 'Professor of the Department of Information and Communication Technologies at Universitat Pompeu Fabra, Barcelona.'
+        },
+        {
+          image: 'https://www.hf.uio.no/ritmo/english/about/organisation/sab/jonathan-sterne.jpg',
+          name: 'Jonathan Sterne',
+          link: 'https://www.mcgill.ca/ahcs/people-contacts/faculty/sterne',
+          bio: 'Professor and James McGill Chair in Culture and Technology at the Department of Art History and Communication Studies, McGill University.'
+        },
+        {
+          image: 'https://www.hf.uio.no/ritmo/english/about/organisation/sab/bilder/andy-tyrell.jpg',
+          name: 'Andy Tyrell',
+          link: 'https://www.york.ac.uk/electronic-engineering/staff/andy_tyrrell/',
+          bio: 'Professor and Head of Department at the Department of Electronic Engineering, University of York.'
+        },
+        {
+          image: 'https://www.hf.uio.no/ritmo/english/about/organisation/sab/bilder/peter_vuust.jpg',
+          name: 'Peter Vuust',
+          link: 'http://pure.au.dk/portal/en/persons/peter-vuust(2c697ab6-9b06-4a16-a687-c8cdbd56f661).html',
+          bio: 'Professor at the Center for Music in the Brain, Aarhus University.'
+        }
+      ],
+      people2: [
+        {
+          image: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/images/peter_edwards_6971_200px.jpg',
+          name: 'Peter Edwards',
+          link: 'https://www.hf.uio.no/imv/english/people/aca/tenured/peterje/index.html',
+          bio: 'Head of Department, Department of Musicology, University of Oslo'
+        },
+        {
+          image: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/images/ellenmk.jpg',
+          name: 'Ellen Munthe-Kaas',
+          link: 'https://www.mn.uio.no/ifi/english/people/aca/ellenmk/index.html',
+          bio: 'Head of Department, Department of Informatics, University of Oslo'
+        },
+        {
+          image: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/images/paalkra.jpg',
+          name: 'Pål Kraft',
+          link: 'https://www.sv.uio.no/psi/english/people/aca/paalkra/index.html',
+          bio: 'Head of Department, Department of Psychology'
+        }
+      ],
+      people3: [
+        {
+          image: '',
+          name: '',
+          link: '',
+          bio: ''
+        },
+        {
+          image: '',
+          name: '',
+          link: '',
+          bio: ''
+        },
+        {
+          image: '',
+          name: '',
+          link: '',
+          bio: ''
+        }
+      ],
+      people4: [
+        {
+          image: '',
+          name: '',
+          link: '',
+          bio: ''
+        },
+        {
+          image: '',
+          name: '',
+          link: '',
+          bio: ''
+        },
+        {
+          image: '',
+          name: '',
+          link: '',
+          bio: ''
+        },
+        {
+          image: '',
+          name: '',
+          link: '',
+          bio: ''
+        },
+        {
+          image: '',
+          name: '',
+          link: '',
+          bio: ''
+        },
+        {
+          image: '',
+          name: '',
+          link: '',
+          bio: ''
+        },
+        {
+          image: '',
+          name: '',
+          link: '',
+          bio: ''
+        },
+        {
+          image: '',
+          name: '',
+          link: '',
+          bio: ''
+        },
+        {
+          image: '',
+          name: '',
+          link: '',
+          bio: ''
+        },
+        {
+          image: '',
+          name: '',
+          link: '',
+          bio: ''
         }
       ]
     }

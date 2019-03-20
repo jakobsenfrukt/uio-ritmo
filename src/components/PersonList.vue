@@ -3,9 +3,11 @@
     <h3 v-if="heading">{{ heading }}</h3>
     <div class="person-list">
       <Person
-        image="https://pbs.twimg.com/profile_images/941101314938949638/wc2T0MFY_400x400.jpg"
-        name="Svein Stølen"
-        bio="Dette er bioen!"
+        v-for="(person, index) in people" :key="`person-${index}`"
+        :image="person.image"
+        :name="person.name"
+        :link="person.link"
+        :bio="person.bio"
       />
     </div>
   </section>
@@ -19,7 +21,8 @@ export default {
     Person
   },
   props: {
-    heading: String
+    heading: String,
+    people: Array
   }
 }
 </script>
@@ -38,7 +41,7 @@ export default {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: left;
     width: $width-l;
     max-width: 100%;
   }

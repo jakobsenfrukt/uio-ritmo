@@ -233,6 +233,7 @@ export default {
     h3 {
       margin: 0;
       font-size: 2rem;
+      color: inherit;
     }
     .subhead {
       font-size: $font-s;
