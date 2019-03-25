@@ -2,7 +2,7 @@
   <section class="two-column">
     <div class="image">
       <Figure
-        image="/images/infographics/RITMO-Matrise.svg"
+        image="/images/infographics/RITMO-Matrise-2.svg"
         alt="Bildet viser no greier"
         size="column"
         caption="Research priorities (hori­zontal) and empirical fields (vertical) that are investigated in RITMO."
@@ -55,17 +55,12 @@ export default {
   }
 
   @media (max-width: $media-s) {
+    display: block;
     margin: 1rem auto 2rem;
     padding: 0 1rem;
-    figure {
-      display: block;
-    }
-
-    img, figcaption,
-    &.reverse figcaption, &.reverse img {
+    .image, .text {
       width: 100%;
-      padding-left: 0;
-      padding-right: 0;
+      padding: 0;
     }
   }
 }

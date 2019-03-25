@@ -68,10 +68,7 @@
       <h2 class="section-heading">RITMO Stories</h2>
       <p class="lead">A project is always more than what you can read from a project page. Hear some of RITMO's researchers present their own research.</p>
     </section>
-    <Youtube
-      video="https://www.youtube.com/embed/azbx0tI2OSE"
-      size="column"
-    />
+    <FixedGallery :media="gallery8" />
     <section id="toc7" class="toc text item background">
       <h2 class="section-heading">RITMO Seminar Series</h2>
       <p class="lead">In 2018 we started up the RITMO Seminar Series as a venue for presenting world-leading scholars from around the world. These events are open to the public, and have attracted participants from all over the Oslo area.</p>
@@ -116,7 +113,6 @@ import Hero from '@/components/Hero.vue'
 import Figure from '@/components/Figure.vue'
 import PersonList from '@/components/PersonList.vue'
 import ImageGallery from '@/components/ImageGallery.vue'
-import Youtube from '@/components/Youtube.vue'
 import TwoColumn from '@/components/TwoColumn.vue'
 import FixedGallery from '@/components/FixedGallery.vue'
 import MultiColumn from '@/components/MultiColumn.vue'
@@ -128,7 +124,6 @@ export default {
     Figure,
     PersonList,
     ImageGallery,
-    Youtube,
     TwoColumn,
     FixedGallery,
     MultiColumn
@@ -312,7 +307,7 @@ export default {
         {
           video: '/images/infographics/RITMO-Results.mp4',
           heading: 'RITMO Publications',
-          caption: 'All RITMO publications in the first year.',
+          caption: 'RITMO\'s reserachers have published a number of scientific articles and book chapters in 2018. They have also given talks and presentations a large number of conferences around the world. The Centre\'s research results also include tool  boxes and apps, as well as several media contributions.',
           link: {
             url: '#',
             text: 'List of all RITMO publications'
@@ -361,6 +356,32 @@ export default {
             'The empirical work is done using various types of motion capture systems and physiological measurements. The analysis and synthesis parts also greatly involve computer-based analysis methods, and in particular different types of machine learning systems. The synthesis part includes both the creation of visual displays of motion (animations) and the creation and use of robots to create physical motion.',
             'The aim is to create basic knowledge that can be used in the development of advanced rhythmic human-robot interaction, such as in dancing.'
           ]
+        }
+      ],
+      gallery8: [
+        {
+          youtube: 'https://www.youtube.com/embed/azbx0tI2OSE',
+          heading: 'The Sonic Profile',
+          quote: 'The sonic profile is designed to match RITMO\'s organic bodily understanding of rhythms to a more psychological approach, via social and cultural aspects. It was important for me to create something that is not tied up in a locked sense of pace or groove, but represents a rhythmic force and a course that could be experienced dramaturgically.',
+          credit: 'Jon Balke, Batagraf'
+        },
+        {
+          youtube: 'https://www.youtube.com/embed/azbx0tI2OSE',
+          heading: 'The Sonic Profile',
+          quote: 'The sonic profile is designed to match RITMO\'s organic bodily understanding of rhythms to a more psychological approach, via social and cultural aspects. It was important for me to create something that is not tied up in a locked sense of pace or groove, but represents a rhythmic force and a course that could be experienced dramaturgically.',
+          credit: 'Jon Balke, Batagraf'
+        },
+        {
+          youtube: 'https://www.youtube.com/embed/azbx0tI2OSE',
+          heading: 'The Sonic Profile',
+          quote: 'The sonic profile is designed to match RITMO\'s organic bodily understanding of rhythms to a more psychological approach, via social and cultural aspects. It was important for me to create something that is not tied up in a locked sense of pace or groove, but represents a rhythmic force and a course that could be experienced dramaturgically.',
+          credit: 'Jon Balke, Batagraf'
+        },
+        {
+          youtube: 'https://www.youtube.com/embed/azbx0tI2OSE',
+          heading: 'The Sonic Profile',
+          quote: 'The sonic profile is designed to match RITMO\'s organic bodily understanding of rhythms to a more psychological approach, via social and cultural aspects. It was important for me to create something that is not tied up in a locked sense of pace or groove, but represents a rhythmic force and a course that could be experienced dramaturgically.',
+          credit: 'Jon Balke, Batagraf'
         }
       ],
       people1: [

@@ -12,11 +12,13 @@
       </figure>
     </div>
     <nav class="gallery-nav">
+      <div class="pagination-button previous" @click="currentImage > 0 ? currentImage-- : null"><img class="arrow" src="/images/arrow-left.svg" /></div>
       <img v-for="(image, index) in images" :key="`image-${index}`" :src="image.url" @click="changeImage(index)" :class="currentImage === index ? 'active' : null" />
+      <div class="pagination-button next" @click="currentImage < images.length-1 ? currentImage++ : null"><img class="arrow" src="/images/arrow-right.svg" /></div>
     </nav>
     <nav class="pagination">
-      <div class="pagination-button previous" @click="currentImage > 0 ? currentImage-- : null"><div class="arrow"></div></div>
-      <div class="pagination-button next" @click="currentImage < images.length-1 ? currentImage++ : null"><div class="arrow"></div></div>
+      <div class="pagination-button previous" @click="currentImage > 0 ? currentImage-- : null"><img class="arrow" src="/images/arrow-left.svg" /></div>
+      <div class="pagination-button next" @click="currentImage < images.length-1 ? currentImage++ : null"><img class="arrow" src="/images/arrow-right.svg" /></div>
     </nav>
   </section>
 </template>
@@ -45,7 +47,7 @@ export default {
 .gallery {
   padding: 0;
   background: $color-white;
-  margin-bottom: 4rem;
+  margin-bottom: 8rem;
   position: relative;
 }
 div {
@@ -61,7 +63,7 @@ div {
   img {
     height: 80vh;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     z-index: 1000;
   }
 
@@ -92,7 +94,10 @@ div {
 }
 .gallery-nav {
   padding: 0 1rem;
+  position: relative;
+  width: 100%;
   img {
+    object-fit: cover;
     width: 4rem;
     height: 4rem;
     margin: 0.5rem;
@@ -110,6 +115,9 @@ div {
       box-shadow: 0 0 0 0.2rem $color-turquoise;
     }
   }
+  .pagination-button {
+    background: $color-white;
+  }
 }
 
 .pagination {
@@ -117,54 +125,40 @@ div {
     position: absolute;
     z-index: 2000;
     top: calc(50% - 3rem);
-    width: 3rem;
-    height: 3rem;
+    width: 2.6rem;
+    height: 2.6rem;
     background: $color-turquoise;
     border-radius: 50%;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .2s ease-in-out;
     &:hover {
       background: $color-red;
     }
     .arrow {
-      width: 18px;
-      height: 20px;
-      border-width: 4px 4px 0 0;
-      border-style: solid;
-      margin: 1rem;
-      border-radius: 0 2px 0 0;
-      &:before, &:after {
-        content: "";
-        border-radius: 2px;
-        position: absolute;
-      }
-      &:before {
-        right: 0;
-        top: -3px;
-        width: 23px;
-        height: 4px;
-        -webkit-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-        -webkit-transform-origin: right top;
-        transform-origin: right top;
-        box-shadow: inset 0 0 0 32px;
-      }
-      &:after {
-        width: 4px;
-        height: 4px;
-        left: -2px;
-        top: -4px;
-        box-shadow: inset 0 0 0 32px, 16px 17px;
-      }
+      width: 1rem;
+      height: 1rem;
+    }
+    &.next {
+      right: 0.5rem;
+    }
+    &.previous {
+      left: 0.5rem;
     }
   }
-  .next {
-    right: 0.5rem;
-    transform: rotate(45deg);
+}
 
+@media (max-width: $width-m) {
+  img {
+    object-position: center;
   }
-  .previous {
-    left: 0.5rem;
-    transform: rotate(-135deg);
+  .pagination {
+    &-button {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 }
 

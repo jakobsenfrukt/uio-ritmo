@@ -71,11 +71,10 @@ export default {
 
   @media (max-width: $media-s) {
     margin: 1rem auto 2rem;
-    padding: 0 1rem;
+    padding: 0;
     &-block {
-      max-width: 50%;
+      max-width: 100%;
       display: block;
-      align-self: center;
       padding-right: 2rem;
     }
   }

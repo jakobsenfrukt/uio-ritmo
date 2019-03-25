@@ -60,7 +60,6 @@ export default {
   .media {
     position: sticky;
     top: 0;
-    height: 100vh;
     width: 50%;
     margin: 0 auto 0 0;
     display: flex;
@@ -101,6 +100,9 @@ export default {
     }
 
     a {
+      display: block;
+      max-width: $width-s;
+      margin: 0 auto 2rem;
       font-weight: bold;
       text-decoration: underline;
       color: $color-blue;
@@ -116,6 +118,37 @@ export default {
     font-style: italic;
     text-align: right;
     font-family: $sans-serif;
+  }
+
+  @media (max-width: $media-m) {
+    .wrapper {
+      padding: 0;
+    }
+    .media, .text-wrapper {
+      width: 100%;
+    }
+    .text-wrapper {
+      padding: 0;
+    }
+    .text-wrapper {
+      position: relative;
+      z-index: 2000;
+      
+      .text {
+        padding: 1.5rem 1.5rem 2rem;
+        display: inline-block;
+        margin: 0 auto;
+        background: $color-blue;
+        color: $color-white;
+      }
+      h3, p, blockquote, a {
+        color: $color-white;
+      }
+      h3, :active {
+        margin-bottom: 0.5rem;
+      }
+
+    }
   }
 }
 </style>

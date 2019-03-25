@@ -33,7 +33,24 @@
       <router-view/>
     </main>
     <footer class="site-footer">
-      <a href="#">Gå til uio.no</a>
+      <div class="flex">
+        <div>
+          <a href="https://www.hf.uio.no/ritmo/english">
+            RITMO - Centre for Interdisciplinary Studies in Rhythm, Time and Motion
+          </a>
+        </div>
+        <div>
+          <a href="https://uio.no">
+            <img src="/uio-full.png" />
+          </a>
+        </div>
+        <div>
+          <p>
+            Ansvarlig redaktør:<br />
+            <a href="#">Navn Navnesen</a>
+          </p>
+        </div>
+      </div>
     </footer>
   </div>
 </template>
@@ -302,15 +319,38 @@ export default {
 
 .site-footer {
   width: 100%;
-  padding: 8rem 1rem 4rem;
+  padding: 5rem 1rem;
   background: $color-theme-dark;
   color: $color-white;
 
   text-align: center;
+  font-family: $serif;
+
+  .flex {
+    width: $width-xl;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+      width: 25%;
+    }
+  }
+
+  p {
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  img {
+    vertical-align: middle;
+    padding: 0.5rem;
+  }
 
   a {
     color: inherit;
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 </style>
