@@ -265,9 +265,7 @@ export default {
 
     a {
       color: $color-white;
-      &:hover {
-        text-decoration: underline;
-      }
+      text-decoration: none;
       &:before {
         content: " ";
         display: inline-block;

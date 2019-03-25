@@ -41,18 +41,17 @@ export default {
   max-width: 100%;
   margin: 0 auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
 
   &-block {
     max-width: 25%;
     display: block;
-    align-self: center;
     padding-right: 2rem;
   }
 
   h3 {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     margin: 0.5rem auto;
   }
 
@@ -60,8 +59,10 @@ export default {
     font-size: $font-s;
   }
 
-  img {
-    max-width: 100%;
+  /deep/ img {
+    width: 100%;
+    height: 8rem;
+    object-fit: cover;
   }
 
   .figure {

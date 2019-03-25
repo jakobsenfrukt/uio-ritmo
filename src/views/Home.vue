@@ -75,6 +75,7 @@
     <section id="toc7" class="toc text item background">
       <h2 class="section-heading">RITMO Seminar Series</h2>
       <p class="lead">In 2018 we started up the RITMO Seminar Series as a venue for presenting world-leading scholars from around the world. These events are open to the public, and have attracted participants from all over the Oslo area.</p>
+      <MultiColumn :blocks="blocks2" />
     </section>
     <section id="toc8" class="toc text item">
       <h2 class="section-heading">RITMO Behind the Scenes</h2>
@@ -472,28 +473,28 @@ export default {
       ],
       blocks2: [
         {
-          image: '/images/infographics/RITMO-Silhuett.svg',
-          heading: 'Peter Edwards',
-          link: 'https://www.hf.uio.no/imv/english/people/aca/tenured/peterje/index.html',
-          text: 'Head of Department, Department of Musicology, University of Oslo'
+          image: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/images/david.huron.jpg',
+          heading: 'A Theory of Sadness: Melancholy, Grief, and Nostalgia',
+          link: 'https://www.hf.uio.no/ritmo/english/news-and-events/events/seminars/2018/december/on-the-musically-sublime.html',
+          text: 'David Huron, Ohio State University'
         },
         {
-          image: '/images/infographics/RITMO-Silhuett.svg',
-          heading: 'Peter Edwards',
-          link: 'https://www.hf.uio.no/imv/english/people/aca/tenured/peterje/index.html',
-          text: 'Head of Department, Department of Musicology, University of Oslo'
+          image: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/images/andreaschiavio.jpg',
+          heading: 'Being, Knowing, and Doing. 4E Cognition and the Dynamics of Musical Development',
+          link: 'https://www.hf.uio.no/ritmo/english/news-and-events/events/seminars/2018/october/index.html',
+          text: 'Andrea Schiavio, University of Graz'
         },
         {
-          image: '/images/infographics/RITMO-Silhuett.svg',
-          heading: 'Peter Edwards',
-          link: 'https://www.hf.uio.no/imv/english/people/aca/tenured/peterje/index.html',
-          text: 'Head of Department, Department of Musicology, University of Oslo'
+          image: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/images/specht.jpg',
+          heading: 'Rhythm, Tempo, and the Brain: fMRI studies in Bergen',
+          link: 'https://www.hf.uio.no/ritmo/english/news-and-events/events/seminars/2018/september/index.html',
+          text: 'Karsten Specht, University of Bergen'
         },
         {
-          image: '/images/infographics/RITMO-Silhuett.svg',
-          heading: 'Peter Edwards',
-          link: 'https://www.hf.uio.no/imv/english/people/aca/tenured/peterje/index.html',
-          text: 'Head of Department, Department of Musicology, University of Oslo'
+          image: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/images/maria-witek-200x300.jpg',
+          heading: 'Musical Groove: Effect on pleasure, body-movement and the brain',
+          link: 'https://www.hf.uio.no/ritmo/english/news-and-events/events/seminars/2018/june/index.html',
+          text: 'Maria Witek, University of Birmingham'
         }
       ]
     }

@@ -99,6 +99,16 @@ export default {
         line-height: 0.9;
       }
     }
+
+    a {
+      font-weight: bold;
+      text-decoration: underline;
+      color: $color-blue;
+      transition: color .2s ease-in-out;
+      &:hover {
+        color: $color-red;
+      }
+    }
   }
 
   .credit {
