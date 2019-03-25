@@ -70,15 +70,15 @@ div {
     top: 1rem;
     left: 0; right: 0; bottom: 1rem;
     z-index: 1001;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
   }
 
   figcaption {
     padding: 0.6rem 1rem;
     width: $width-s;
-    margin: 0;
-    position: absolute;
     max-width: 90%;
-    bottom: 0;
     background: $color-black;
     color: $color-white;
   }
@@ -172,14 +172,9 @@ div {
 
 div {
   figcaption {
-    padding: 1rem 1rem 1rem 2rem;
-    border-radius: 1rem;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    left: -1rem;
-    bottom: 1rem;
-    background-color: $color-black;
-    color: $color-white;
+    padding: 1rem;
+    background-color: $color-white;
+    color: $color-black;
     font-family: $serif;
   }
 }

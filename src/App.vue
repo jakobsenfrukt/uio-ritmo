@@ -273,6 +273,7 @@ export default {
         display: inline-block;
         width: 0.4rem;
         height: 0.4rem;
+        vertical-align: middle;
         background: $color-turquoise;
         border-radius: 0.4rem;
         margin-right: 0.6rem;

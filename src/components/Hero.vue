@@ -54,7 +54,7 @@ export default {
   }
   h1 {
     font-size: 5rem;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
     line-height: 1;
   }
   .subhead {

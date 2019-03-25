@@ -6,13 +6,16 @@
         <Video v-else-if="media.video" :video="media.video" size="full" />
         <Youtube v-else :video="media.youtube" size="full" />
       </div>
-      <div v-if="media.caption" class="caption-wrapper">
-        <div class="caption">
+      <div class="text-wrapper">
+        <div class="text">
           <h3 v-if="media.heading">{{ media.heading }}</h3>
-          <p>
-            {{ media.caption }}<br />
-            <a v-if="media.link" :href="media.link.url">{{ media.link.text }}</a>
-          </p>
+          <span v-if="media.caption">{{ media.caption }}</span>
+          <template v-if="media.text">
+            <p v-for="(text, index) in media.text" :key="`${index}`">
+              {{ text }}
+            </p>
+          </template>
+          <a v-if="media.link" :href="media.link.url">{{ media.link.text }}</a>
           <span v-if="media.credit" class="credit">{{ media.credit }}</span>
         </div>
       </div>
@@ -40,7 +43,8 @@ export default {
 @import '@/css/variables.scss';
 
 .gallery-fixed {
-  width: $width-xl;
+  width: 100%;
+  padding: 1rem;
   margin: 0 auto 4rem;
   max-width: 100%;
   position: relative;
@@ -66,11 +70,15 @@ export default {
     }
   }
 
-  .caption-wrapper {
+  .text-wrapper {
     height: 100vh;
     width: 50%;
     margin: 0 0 0 auto;
     padding: 0 1rem;
+
+    span {
+      display: block;
+    }
   }
 
   .credit {

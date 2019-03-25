@@ -1,5 +1,5 @@
 <template>
-  <section class="two-column">
+  <section class="three-column">
     <div class="image">
       <Figure
         image="/images/infographics/RITMO-Matrise.svg"
@@ -34,20 +34,14 @@ export default {
 
 .two-column {
   width: $width-xl;
-  max-width: 100%;
   margin: 3rem auto 0;
   display: flex;
   align-items: center;
 
-  .image {
-    width: 50%;
+  .figure {
+    width: 33%;
     display: block;
     align-self: center;
-    padding: 0 4rem 0 2rem;
-  }
-  .text {
-    width: 50%;
-    padding-left: 2rem;
   }
 
   &.reverse {

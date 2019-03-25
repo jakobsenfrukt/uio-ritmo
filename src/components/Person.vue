@@ -54,7 +54,6 @@ export default {
   @media (max-width: $media-s) {
     width: 100%;
     img {
-      width: 30%;
       margin-right: 1rem;
       float: left;
     }

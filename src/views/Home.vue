@@ -37,39 +37,7 @@
       alt="Bildet viser no greier"
       size="column"
     />
-    <section class="text item">
-      <h3>Rythm</h3>
-      <p>In the RHYTHM research cluster we investigate the basic structures and features of rhythmic phenomena as well as the links between these structures and features and the ways in which time is organized in human perception and cognition. We are also interested in why some rhythms are experienced as pleasurable and invite dance or other forms of body motion, whereas others do not.</p>
-      <p>We investigate rhythm at various temporal scales, from micro-rhythmic relationships at the millisecond level to patterns of rhythms unfolding over several seconds. We are particularly interested in complex rhythms, rhythmic variation (micro-rhythm), rhythm across modalities (hearing, vision and body motion) and cultural variation. We use qualitative, behavioral and neurophysiological methods, often combining them to shed light on the same questions from different angles.</p>
-      <p>Our aim is to understand how rhythm underpins our ability to structure past and predict future events, and to identify the perceptual and cognitive mechanisms underlying the experience and execution of rhythm.</p>
-    </section>
-    <Figure
-      image="https://www.hf.uio.no/ritmo/bilder/interaction-ritmo-303x230px-black.jpg"
-      alt="Bildet viser no greier"
-      size="column"
-    />
-    <section class="text item">
-      <h3>Time</h3>
-      <p>The TIME research cluster addresses the ways in which rhythm impacts the structuring of temporal events beyond the ‘now’, that is, the extent to which rhythm plays a role in remembering and structuring longer time spans. We will also investigate the relationship between rhythm and the experience of fragmented time.</p>
-      <p>A second priority is to investigate the temporality of experiences of pleasure and absorption, the fact that rhythm facilitates entrainment and synchronization, and the social dimensions of this aspect of rhythm. A related question is how philosophical, psychological, and historical explorations of time can be revisited through new interdisciplinary perspectives on the experience of rhythm.</p>
-      <p>Our aim is to understand how rhythm underpins our ability to structure and remember large-scale formations of time, and to understand the related processes of pleasure and engagement.</p>
-    </section>
-    <Figure
-      image="https://www.hf.uio.no/ritmo/bilder/time-ritmo-303x230px.jpg"
-      alt="Bildet viser no greier"
-      size="column"
-    />
-    <section class="text item">
-      <h3>Motion</h3>
-      <p>The MOTION research cluster focuses on the analysis of human body rhythm and the synthesis of rhythms with machines. The aim is to understand more about the human body's internal and external rhythms and how rhythms can be used in interaction. It is also relevant to understand how music influences people's body motion, such as in dancing, but also when trying to stand still. Knowledge about the motion-inducing effects of music can then be used in the creation of interactive systems in which the music is controlled through the human body.</p>
-      <p>The empirical work is done using various types of motion capture systems and physiological measurements. The analysis and synthesis parts also greatly involve computer-based analysis methods, and in particular different types of machine learning systems. The synthesis part includes both the creation of visual displays of motion (animations) and the creation and use of robots to create physical motion.</p>
-      <p>The aim is to create basic knowledge that can be used in the development of advanced rhythmic human-robot interaction, such as in dancing.</p>
-    </section>
-    <Figure
-      image="https://www.hf.uio.no/ritmo/bilder/structure-ritmo-303x230px.jpg"
-      alt="Bildet viser no greier"
-      size="column"
-    />
+    <FixedGallery :media="gallery7" />
     <section id="toc3" class="toc text item">
       <h2 class="section-heading">RITMO's Research Priorities</h2>
       <p class="lead">In addition to RITMO's organizational clusters and operational research groups described above, we also have four research priorities that influence and guides all the other activities:</p>
@@ -137,7 +105,6 @@
     </section>
     <PersonList :people="people1" />
     <PersonList :people="people2" heading="Steering Committee" />
-    <PersonList :people="people3" heading="Management" />
   </div>
 </template>
 
@@ -321,19 +288,19 @@ export default {
         {
           image: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/images/ritmo-hovedmerke-290818.png',
           heading: 'The Visual Profile',
-          caption: '«We have developed a visual mark/emblem based on the letter forms in the word RITMO, broken down to its smallest geometric constituents. The visual profile is a starting point consisting of flexible building blocks and some “rules“ for use, which can be varied indefinitely and generate new opinions, structures and constellations.»',
+          quote: 'We have developed a visual mark/emblem based on the letter forms in the word RITMO, broken down to its smallest geometric constituents. The visual profile is a starting point consisting of flexible building blocks and some “rules“ for use, which can be varied indefinitely and generate new opinions, structures and constellations.',
           credit: 'Anagram'
         },
         {
           youtube: 'https://www.youtube.com/embed/kcKZdvazPBQ',
           heading: 'The Sonic Profile',
-          caption: '«The sonic profile is designed to match RITMO\'s organic bodily understanding of rhythms to a more psychological approach, via social and cultural aspects. It was important for me to create something that is not tied up in a locked sense of pace or groove, but represents a rhythmic force and a course that could be experienced dramaturgically.»',
+          quote: 'The sonic profile is designed to match RITMO\'s organic bodily understanding of rhythms to a more psychological approach, via social and cultural aspects. It was important for me to create something that is not tied up in a locked sense of pace or groove, but represents a rhythmic force and a course that could be experienced dramaturgically.',
           credit: 'Jon Balke, Batagraf'
         },
         {
           image: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/images/20181115_190400_320px.jpg',
           heading: 'The Dynamic Profile',
-          caption: '«I was excited to be the first one to explore the re-configuration possibilities of the visual elements of RITMO\'s profile. The result, shown at RITMO Largo, was an interactive display of the visual elements projected on the floor. The elements reacted to the sound in the space. It was fascinating to see the elements come alive with people\'s talking and music playing, and I got many ideas for how to further develop the interaction.»',
+          quote: 'I was excited to be the first one to explore the re-configuration possibilities of the visual elements of RITMO\'s profile. The result, shown at RITMO Largo, was an interactive display of the visual elements projected on the floor. The elements reacted to the sound in the space. It was fascinating to see the elements come alive with people\'s talking and music playing, and I got many ideas for how to further develop the interaction.',
           credit: 'Julian Fuhrer, RITMO PhD student'
         },
       ],
@@ -361,6 +328,35 @@ export default {
           image: '/images/infographics/RITMO-Partners-land.svg',
           heading: 'RITMO in the World',
           caption: 'Argentina, Belgium, Brazil, Canada, Switzerland, Germany, Denmark, Spain, Finland, France, United Kingdom, Israel, India, Iceland, Italy, Japan, Netherlands, Sweden, USA.'
+        }
+      ],
+      gallery7: [
+        {
+          image: '/images/rythm.jpg',
+          heading: 'Rythm',
+          text: [
+            'In the RHYTHM research cluster we investigate the basic structures and features of rhythmic phenomena as well as the links between these structures and features and the ways in which time is organized in human perception and cognition. We are also interested in why some rhythms are experienced as pleasurable and invite dance or other forms of body motion, whereas others do not.',
+            'We investigate rhythm at various temporal scales, from micro-rhythmic relationships at the millisecond level to patterns of rhythms unfolding over several seconds. We are particularly interested in complex rhythms, rhythmic variation (micro-rhythm), rhythm across modalities (hearing, vision and body motion) and cultural variation. We use qualitative, behavioral and neurophysiological methods, often combining them to shed light on the same questions from different angles.',
+            'Our aim is to understand how rhythm underpins our ability to structure past and predict future events, and to identify the perceptual and cognitive mechanisms underlying the experience and execution of rhythm.'
+          ]
+        },
+        {
+          image: '/images/time.jpg',
+          heading: 'Time',
+          text: [
+            'The TIME research cluster addresses the ways in which rhythm impacts the structuring of temporal events beyond the ‘now’, that is, the extent to which rhythm plays a role in remembering and structuring longer time spans. We will also investigate the relationship between rhythm and the experience of fragmented time.',
+            'A second priority is to investigate the temporality of experiences of pleasure and absorption, the fact that rhythm facilitates entrainment and synchronization, and the social dimensions of this aspect of rhythm. A related question is how philosophical, psychological, and historical explorations of time can be revisited through new interdisciplinary perspectives on the experience of rhythm.',
+            'Our aim is to understand how rhythm underpins our ability to structure and remember large-scale formations of time, and to understand the related processes of pleasure and engagement.'
+          ]
+        },
+        {
+          image: '/images/motion.jpg',
+          heading: 'Motion',
+          text: [
+            'The MOTION research cluster focuses on the analysis of human body rhythm and the synthesis of rhythms with machines. The aim is to understand more about the human body\'s internal and external rhythms and how rhythms can be used in interaction. It is also relevant to understand how music influences people\'s body motion, such as in dancing, but also when trying to stand still. Knowledge about the motion-inducing effects of music can then be used in the creation of interactive systems in which the music is controlled through the human body.',
+            'The empirical work is done using various types of motion capture systems and physiological measurements. The analysis and synthesis parts also greatly involve computer-based analysis methods, and in particular different types of machine learning systems. The synthesis part includes both the creation of visual displays of motion (animations) and the creation and use of robots to create physical motion.',
+            'The aim is to create basic knowledge that can be used in the development of advanced rhythmic human-robot interaction, such as in dancing.'
+          ]
         }
       ],
       people1: [
@@ -433,104 +429,22 @@ export default {
       ],
       people2: [
         {
-          image: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/images/peter_edwards_6971_200px.jpg',
+          image: '/images/infographics/RITMO-Silhuett.svg',
           name: 'Peter Edwards',
           link: 'https://www.hf.uio.no/imv/english/people/aca/tenured/peterje/index.html',
           bio: 'Head of Department, Department of Musicology, University of Oslo'
         },
         {
-          image: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/images/ellenmk.jpg',
+          image: '/images/infographics/RITMO-Silhuett.svg',
           name: 'Ellen Munthe-Kaas',
           link: 'https://www.mn.uio.no/ifi/english/people/aca/ellenmk/index.html',
           bio: 'Head of Department, Department of Informatics, University of Oslo'
         },
         {
-          image: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/images/paalkra.jpg',
+          image: '/images/infographics/RITMO-Silhuett.svg',
           name: 'Pål Kraft',
           link: 'https://www.sv.uio.no/psi/english/people/aca/paalkra/index.html',
           bio: 'Head of Department, Department of Psychology'
-        }
-      ],
-      people3: [
-        {
-          image: '',
-          name: '',
-          link: '',
-          bio: ''
-        },
-        {
-          image: '',
-          name: '',
-          link: '',
-          bio: ''
-        },
-        {
-          image: '',
-          name: '',
-          link: '',
-          bio: ''
-        }
-      ],
-      people4: [
-        {
-          image: '',
-          name: '',
-          link: '',
-          bio: ''
-        },
-        {
-          image: '',
-          name: '',
-          link: '',
-          bio: ''
-        },
-        {
-          image: '',
-          name: '',
-          link: '',
-          bio: ''
-        },
-        {
-          image: '',
-          name: '',
-          link: '',
-          bio: ''
-        },
-        {
-          image: '',
-          name: '',
-          link: '',
-          bio: ''
-        },
-        {
-          image: '',
-          name: '',
-          link: '',
-          bio: ''
-        },
-        {
-          image: '',
-          name: '',
-          link: '',
-          bio: ''
-        },
-        {
-          image: '',
-          name: '',
-          link: '',
-          bio: ''
-        },
-        {
-          image: '',
-          name: '',
-          link: '',
-          bio: ''
-        },
-        {
-          image: '',
-          name: '',
-          link: '',
-          bio: ''
         }
       ]
     }
