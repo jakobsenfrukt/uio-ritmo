@@ -2,7 +2,7 @@
   <div class="gallery-fixed">
     <div class="wrapper item">
       <div class="media-wrapper">
-        <div v-for="(media, index) in media" :key="`media-${index}`" class="media">
+        <div v-for="(media, index) in media" :key="`media-${index}`" class="media" :class="[index === 0 ? 'visible' : null]">
           <img v-if="media.image" :src="media.image" />
           <Video v-else-if="media.video" :video="media.video" size="full" :controls="media.controls" />
           <Youtube v-else :video="media.youtube" size="full" />
@@ -57,15 +57,25 @@ export default {
   .wrapper {
     width: 100%;
     padding: 1rem;
+    display: flex;
   }
 
   .media-wrapper {
     position: sticky;
-    top: 50%;
+    top: 25vh;
+    height: 50vh;
     width: 50%;
     margin: 0 auto 0 0;
-    display: flex;
     padding-right: 1rem;
+    display: flex;
+    align-items: center;
+
+    .media {
+      display: none;
+      &.visible {
+        display: block;
+      }
+    }
 
     img, .video {
       width: 100%;
@@ -81,9 +91,10 @@ export default {
     font-family: $serif;
 
     .text {
+      padding-top: 20%;
       margin-bottom: 100vh;
       &:last-child {
-        margin-bottom: 0;
+        margin-bottom: 30vh;
       }
     }
 
