@@ -54,9 +54,9 @@ export default {
   @media (max-width: $media-s) {
     width: 100%;
     padding-right: 0;
-    margin: 1rem auto;
+    margin: 0.6rem auto;
     .name {
-      margin: 1rem auto 0.3rem;
+      margin: 0.5rem auto 0.3rem;
     }
     img {
       margin-right: 1rem;

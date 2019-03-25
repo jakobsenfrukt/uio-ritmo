@@ -96,7 +96,9 @@ div {
   padding: 0 3rem;
   position: relative;
   width: 100%;
+  max-width: 100%;
   display: flex;
+  overflow: hidden;
   img {
     object-fit: cover;
     width: 4rem;

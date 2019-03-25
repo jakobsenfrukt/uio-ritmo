@@ -81,6 +81,7 @@ export default {
       width: 100%;
       display: block;
       align-self: center;
+      margin: 0 auto;
     }
   }
 
@@ -148,6 +149,7 @@ export default {
 
     .wrapper {
       padding: 0;
+      display: block;
     }
     .media-wrapper, .text-wrapper {
       width: 100%;
@@ -156,11 +158,13 @@ export default {
     .text-wrapper {
       position: relative;
       z-index: 2;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       
       .text {
         padding: 1.5rem 1.5rem 2rem;
         display: inline-block;
-        margin: 0 auto;
         background: $color-blue;
         color: $color-white;
       }

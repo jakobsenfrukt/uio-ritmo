@@ -328,6 +328,7 @@ export default {
 
   .flex {
     width: $width-xl;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -340,7 +341,7 @@ export default {
 
   p {
     line-height: 1.2;
-    margin: 0;
+    margin: 0 auto;
   }
 
   img {
@@ -351,6 +352,17 @@ export default {
   a {
     color: inherit;
     text-decoration: none;
+  }
+
+  @media (max-width: $media-m) {
+    .flex {
+      display: block;
+
+      div {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
   }
 }
 </style>
