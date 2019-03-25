@@ -15,6 +15,9 @@
               {{ text }}
             </p>
           </template>
+          <blockquote v-if="media.quote">
+            {{ media.quote }}
+          </blockquote>
           <a v-if="media.link" :href="media.link.url">{{ media.link.text }}</a>
           <span v-if="media.credit" class="credit">{{ media.credit }}</span>
         </div>
@@ -75,14 +78,30 @@ export default {
     width: 50%;
     margin: 0 0 0 auto;
     padding: 0 1rem;
+    font-family: $serif;
 
     span {
       display: block;
     }
+
+    blockquote {
+      font-size: 1.2rem;
+      font-style: italic;
+      position: relative;
+      &:before {
+        content: "“";
+        display: block;
+        font-size: 6rem;
+        color: $color-turquoise;
+        position: absolute;
+        left: -3rem;
+        top: 0;
+        line-height: 0.9;
+      }
+    }
   }
 
   .credit {
-    font-size: $font-s;
     display: block;
     font-style: italic;
     text-align: right;
