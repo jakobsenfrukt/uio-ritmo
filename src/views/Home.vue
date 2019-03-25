@@ -89,6 +89,7 @@
     <FixedGallery :media="gallery5" />
     <section id="toc10" class="toc text item background">
       <h2 class="section-heading">Awards</h2>
+      <MultiColumn :blocks="blocks1" />
     </section>
     <section id="toc11" class="toc text item">
       <h2 class="section-heading">RITMO People</h2>
@@ -117,6 +118,7 @@ import ImageGallery from '@/components/ImageGallery.vue'
 import Youtube from '@/components/Youtube.vue'
 import TwoColumn from '@/components/TwoColumn.vue'
 import FixedGallery from '@/components/FixedGallery.vue'
+import MultiColumn from '@/components/MultiColumn.vue'
 
 export default {
   name: 'home',
@@ -127,7 +129,8 @@ export default {
     ImageGallery,
     Youtube,
     TwoColumn,
-    FixedGallery
+    FixedGallery,
+    MultiColumn
   },
   data: function() {
     return {
@@ -306,7 +309,7 @@ export default {
       ],
       gallery6: [
         {
-          image: '/images/infographics/RITMO-Results.svg',
+          video: '/images/infographics/RITMO-Results.mp4',
           heading: 'RITMO Publications',
           caption: 'All RITMO publications in the first year.',
           link: {
@@ -445,6 +448,52 @@ export default {
           name: 'Pål Kraft',
           link: 'https://www.sv.uio.no/psi/english/people/aca/paalkra/index.html',
           bio: 'Head of Department, Department of Psychology'
+        }
+      ],
+      blocks1: [
+        {
+          image: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/images/innovasjonsprisen2018.jpg',
+          heading: 'Innovation Prize',
+          link: 'https://www.uio.no/om/aktuelt/pressemeldinger/2018/priser-til-uio-ansatte.html',
+          text: 'The University of Oslo\'s Innovation prize for 2018 was awarded to RITMO\'s Centre Directors Anne Danielsen and Alexander Refsum Jensenius.'
+        },
+        {
+          image: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/images/laeng-dnva2018.jpeg',
+          heading: 'Academy Membership',
+          link: 'http://english.dnva.no/c40133/artikkel/vis.html?tid=40201',
+          text: 'Bruno Laeng was elected member of in the Humanities and Social Sciences Division of the Norwegian Academy of Science and Letters in 2018.'
+        },
+        {
+          image: 'https://www.hf.uio.no/ritmo/english/about/yearly-report/images/20180508_174334.jpg',
+          heading: 'EUA Committee',
+          link: 'https://eua.eu/about/working-groups.html',
+          text: 'Alexander Refsum Jensenius was appointed as the Norwegian representative to the EUA Expert Group on Science 2.0 / Open Science.'
+        }
+      ],
+      blocks2: [
+        {
+          image: '/images/infographics/RITMO-Silhuett.svg',
+          heading: 'Peter Edwards',
+          link: 'https://www.hf.uio.no/imv/english/people/aca/tenured/peterje/index.html',
+          text: 'Head of Department, Department of Musicology, University of Oslo'
+        },
+        {
+          image: '/images/infographics/RITMO-Silhuett.svg',
+          heading: 'Peter Edwards',
+          link: 'https://www.hf.uio.no/imv/english/people/aca/tenured/peterje/index.html',
+          text: 'Head of Department, Department of Musicology, University of Oslo'
+        },
+        {
+          image: '/images/infographics/RITMO-Silhuett.svg',
+          heading: 'Peter Edwards',
+          link: 'https://www.hf.uio.no/imv/english/people/aca/tenured/peterje/index.html',
+          text: 'Head of Department, Department of Musicology, University of Oslo'
+        },
+        {
+          image: '/images/infographics/RITMO-Silhuett.svg',
+          heading: 'Peter Edwards',
+          link: 'https://www.hf.uio.no/imv/english/people/aca/tenured/peterje/index.html',
+          text: 'Head of Department, Department of Musicology, University of Oslo'
         }
       ]
     }

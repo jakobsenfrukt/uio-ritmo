@@ -9,7 +9,7 @@
       <div class="text-wrapper">
         <div class="text">
           <h3 v-if="media.heading">{{ media.heading }}</h3>
-          <span v-if="media.caption">{{ media.caption }}</span>
+          <p v-if="media.caption">{{ media.caption }}</p>
           <template v-if="media.text">
             <p v-for="(text, index) in media.text" :key="`${index}`">
               {{ text }}
@@ -80,8 +80,8 @@ export default {
     padding: 0 1rem;
     font-family: $serif;
 
-    span {
-      display: block;
+    p:last-of-type {
+      margin-bottom: 0;
     }
 
     blockquote {
