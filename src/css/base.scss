@@ -125,12 +125,16 @@ ul {
     margin-bottom: 1rem;
     &.lead {
       font-size: 1.2rem;
+      margin-bottom: 1rem;
     }
   }
   section {
     padding: 0 1rem;
     p:last-child {
       margin-bottom: 2rem;
+    }
+    &.background {
+      padding-bottom: 1rem;
     }
   }
 }

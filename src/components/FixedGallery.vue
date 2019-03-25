@@ -3,7 +3,7 @@
     <div v-for="(media, index) in media" :key="`media-${index}`" class="wrapper item">
       <div class="media">
         <img v-if="media.image" :src="media.image" />
-        <Video v-else-if="media.video" :video="media.video" size="full" />
+        <Video v-else-if="media.video" :video="media.video" size="full" :controls="media.controls" />
         <Youtube v-else :video="media.youtube" size="full" />
       </div>
       <div class="text-wrapper">
@@ -73,7 +73,6 @@ export default {
   }
 
   .text-wrapper {
-    height: 100vh;
     width: 50%;
     margin: 0 0 0 auto;
     padding: 0 1rem;
@@ -125,18 +124,18 @@ export default {
   }
 
   @media (max-width: $media-m) {
+    padding: 0;
+
     .wrapper {
       padding: 0;
     }
     .media, .text-wrapper {
       width: 100%;
-    }
-    .text-wrapper {
       padding: 0;
     }
     .text-wrapper {
       position: relative;
-      z-index: 2000;
+      z-index: 2;
       
       .text {
         padding: 1.5rem 1.5rem 2rem;

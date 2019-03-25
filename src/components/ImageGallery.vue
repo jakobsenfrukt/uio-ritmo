@@ -64,14 +64,14 @@ div {
     height: 80vh;
     width: 100%;
     object-fit: contain;
-    z-index: 1000;
+    z-index: 1;
   }
 
   .caption-wrapper {
     position: absolute;
     top: 1rem;
     left: 0; right: 0; bottom: 1rem;
-    z-index: 1001;
+    z-index: 2;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -96,6 +96,7 @@ div {
   padding: 0 3rem;
   position: relative;
   width: 100%;
+  display: flex;
   img {
     object-fit: cover;
     width: 4rem;
@@ -130,7 +131,7 @@ div {
 .pagination {
   &-button {
     position: absolute;
-    z-index: 2000;
+    z-index: 2;
     top: calc(50% - 2.6rem);
     width: 2.6rem;
     height: 2.6rem;

@@ -68,6 +68,10 @@ export default {
   @media (max-width: $media-s) {
     padding-top: 4rem;
     min-height: 60vh;
+    margin-bottom: 0;
+    .overlay {
+      position: relative;
+    }
     img, video {
       padding-bottom: 1rem;
     }
@@ -75,7 +79,10 @@ export default {
       padding: 0 1rem;
     }
     h1 {
-      font-size: 4rem;
+      font-size: 2.8rem;
+    }
+    .subhead {
+      font-size: 1.2rem;
     }
   }
 }

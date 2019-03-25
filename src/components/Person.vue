@@ -53,9 +53,17 @@ export default {
 
   @media (max-width: $media-s) {
     width: 100%;
+    padding-right: 0;
+    margin: 1rem auto;
+    .name {
+      margin: 1rem auto 0.3rem;
+    }
     img {
       margin-right: 1rem;
       float: left;
+    }
+    .bio {
+      font-size: $font-s;
     }
   }
 }

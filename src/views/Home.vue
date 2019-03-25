@@ -291,7 +291,7 @@ export default {
           credit: 'Anagram'
         },
         {
-          youtube: 'https://www.youtube.com/embed/kcKZdvazPBQ',
+          video: '/images/logo/logo-anim-white.mp4',
           heading: 'The Sonic Profile',
           quote: 'The sonic profile is designed to match RITMO\'s organic bodily understanding of rhythms to a more psychological approach, via social and cultural aspects. It was important for me to create something that is not tied up in a locked sense of pace or groove, but represents a rhythmic force and a course that could be experienced dramaturgically.',
           credit: 'Jon Balke, Batagraf'
@@ -360,28 +360,28 @@ export default {
       ],
       gallery8: [
         {
-          youtube: 'https://www.youtube.com/embed/azbx0tI2OSE',
-          heading: 'The Sonic Profile',
-          quote: 'The sonic profile is designed to match RITMO\'s organic bodily understanding of rhythms to a more psychological approach, via social and cultural aspects. It was important for me to create something that is not tied up in a locked sense of pace or groove, but represents a rhythmic force and a course that could be experienced dramaturgically.',
-          credit: 'Jon Balke, Batagraf'
+          video: '/images/logo/logo-anim-white.mp4',
+          controls: true,
+          heading: 'Et intervjuobjekt',
+          caption: 'Dette er en liten tekst om hva du får se i filmen ved siden av, som introduserer intervjuobjektet og temaet han eller hun forsker på. Lorem ipsum dolor si amet og så videre.'
         },
         {
-          youtube: 'https://www.youtube.com/embed/azbx0tI2OSE',
-          heading: 'The Sonic Profile',
-          quote: 'The sonic profile is designed to match RITMO\'s organic bodily understanding of rhythms to a more psychological approach, via social and cultural aspects. It was important for me to create something that is not tied up in a locked sense of pace or groove, but represents a rhythmic force and a course that could be experienced dramaturgically.',
-          credit: 'Jon Balke, Batagraf'
+          video: '/images/logo/logo-anim-white.mp4',
+          controls: true,
+          heading: 'Et intervjuobjekt',
+          caption: 'Dette er en liten tekst om hva du får se i filmen ved siden av, som introduserer intervjuobjektet og temaet han eller hun forsker på. Lorem ipsum dolor si amet og så videre.'
         },
         {
-          youtube: 'https://www.youtube.com/embed/azbx0tI2OSE',
-          heading: 'The Sonic Profile',
-          quote: 'The sonic profile is designed to match RITMO\'s organic bodily understanding of rhythms to a more psychological approach, via social and cultural aspects. It was important for me to create something that is not tied up in a locked sense of pace or groove, but represents a rhythmic force and a course that could be experienced dramaturgically.',
-          credit: 'Jon Balke, Batagraf'
+          video: '/images/logo/logo-anim-white.mp4',
+          controls: true,
+          heading: 'Et intervjuobjekt',
+          caption: 'Dette er en liten tekst om hva du får se i filmen ved siden av, som introduserer intervjuobjektet og temaet han eller hun forsker på. Lorem ipsum dolor si amet og så videre.'
         },
         {
-          youtube: 'https://www.youtube.com/embed/azbx0tI2OSE',
-          heading: 'The Sonic Profile',
-          quote: 'The sonic profile is designed to match RITMO\'s organic bodily understanding of rhythms to a more psychological approach, via social and cultural aspects. It was important for me to create something that is not tied up in a locked sense of pace or groove, but represents a rhythmic force and a course that could be experienced dramaturgically.',
-          credit: 'Jon Balke, Batagraf'
+          video: '/images/logo/logo-anim-white.mp4',
+          controls: true,
+          heading: 'Et intervjuobjekt',
+          caption: 'Dette er en liten tekst om hva du får se i filmen ved siden av, som introduserer intervjuobjektet og temaet han eller hun forsker på. Lorem ipsum dolor si amet og så videre.'
         }
       ],
       people1: [

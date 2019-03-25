@@ -1,6 +1,9 @@
 <template>
   <div class="video" :class="size">
-    <video muted autoplay>
+    <video v-if="controls" controls>
+      <source :src="video" type="video/mp4">
+    </video>
+    <video v-else muted autoplay>
       <source :src="video" type="video/mp4">
     </video>
   </div>
@@ -11,7 +14,8 @@ export default {
   name: 'Video',
   props: {
     video: String,
-    size: String
+    size: String,
+    controls: Boolean
   }
 }
 </script>
