@@ -1,13 +1,15 @@
 <template>
   <div class="gallery-fixed">
-    <div v-for="(media, index) in media" :key="`media-${index}`" class="wrapper item">
-      <div class="media">
-        <img v-if="media.image" :src="media.image" />
-        <Video v-else-if="media.video" :video="media.video" size="full" :controls="media.controls" />
-        <Youtube v-else :video="media.youtube" size="full" />
+    <div class="wrapper item">
+      <div class="media-wrapper">
+        <div v-for="(media, index) in media" :key="`media-${index}`" class="media">
+          <img v-if="media.image" :src="media.image" />
+          <Video v-else-if="media.video" :video="media.video" size="full" :controls="media.controls" />
+          <Youtube v-else :video="media.youtube" size="full" />
+        </div>
       </div>
       <div class="text-wrapper">
-        <div class="text">
+        <div v-for="(media, index) in media" :key="`text-${index}`" class="text">
           <h3 v-if="media.heading">{{ media.heading }}</h3>
           <p v-if="media.caption">{{ media.caption }}</p>
           <template v-if="media.text">
@@ -57,9 +59,9 @@ export default {
     padding: 1rem;
   }
 
-  .media {
+  .media-wrapper {
     position: sticky;
-    top: 0;
+    top: 50%;
     width: 50%;
     margin: 0 auto 0 0;
     display: flex;
@@ -77,6 +79,13 @@ export default {
     margin: 0 0 0 auto;
     padding: 0 1rem;
     font-family: $serif;
+
+    .text {
+      margin-bottom: 100vh;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
 
     h3 {
       font-family: $sans-serif;
@@ -129,7 +138,7 @@ export default {
     .wrapper {
       padding: 0;
     }
-    .media, .text-wrapper {
+    .media-wrapper, .text-wrapper {
       width: 100%;
       padding: 0;
     }
