@@ -93,7 +93,7 @@ div {
   }
 }
 .gallery-nav {
-  padding: 0 1rem;
+  padding: 0 3rem;
   position: relative;
   width: 100%;
   img {
@@ -109,7 +109,7 @@ div {
     }
     cursor: pointer;
     &:hover {
-      opacity: 0.6;
+      box-shadow: 0 0 0 0.2rem $color-turquoise;
     }
     &.active {
       box-shadow: 0 0 0 0.2rem $color-turquoise;
@@ -117,6 +117,13 @@ div {
   }
   .pagination-button {
     background: $color-white;
+    top: calc(50% - 1.6rem);
+    &:hover {
+      background: inherit;
+      img {
+        box-shadow: none;
+      }
+    }
   }
 }
 
@@ -124,7 +131,7 @@ div {
   &-button {
     position: absolute;
     z-index: 2000;
-    top: calc(50% - 3rem);
+    top: calc(50% - 2.6rem);
     width: 2.6rem;
     height: 2.6rem;
     background: $color-turquoise;

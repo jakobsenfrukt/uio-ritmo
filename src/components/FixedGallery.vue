@@ -79,6 +79,10 @@ export default {
     padding: 0 1rem;
     font-family: $serif;
 
+    h3 {
+      font-family: $sans-serif;
+    }
+
     p:last-of-type {
       margin-bottom: 0;
     }
