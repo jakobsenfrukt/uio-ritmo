@@ -2,7 +2,7 @@
   <section class="gallery item">
     <div class="figure">
       <figure>
-        <img :src="images[currentImage].url" />
+        <img :src="images[currentImage].url" class="main-image" />
         <div v-if="images[currentImage].caption" class="caption-wrapper">
           <figcaption>
             {{ images[currentImage].caption }}
@@ -13,7 +13,7 @@
     </div>
     <nav class="gallery-nav">
       <div class="pagination-button previous" @click="currentImage > 0 ? currentImage-- : null"><img class="arrow" src="/images/arrow-left.svg" /></div>
-      <img v-for="(image, index) in images" :key="`image-${index}`" :src="image.url" @click="changeImage(index)" :class="currentImage === index ? 'active' : null" />
+      <img v-for="(image, index) in images" :key="`image-${index}`" :src="image.url" @click="changeImage(index)" :class="currentImage === index ? 'active' : null" class="nav-image" />
       <div class="pagination-button next" @click="currentImage < images.length-1 ? currentImage++ : null"><img class="arrow" src="/images/arrow-right.svg" /></div>
     </nav>
     <nav class="pagination">
@@ -65,6 +65,10 @@ div {
     width: 100%;
     object-fit: contain;
     z-index: 1;
+  }
+
+  .main-image, .nav-image {
+    background: $color-black;
   }
 
   .caption-wrapper {
