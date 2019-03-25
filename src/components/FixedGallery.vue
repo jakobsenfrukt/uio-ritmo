@@ -146,6 +146,7 @@ export default {
 
   @media (max-width: $media-m) {
     padding: 0;
+    margin-bottom: 0;
 
     .wrapper {
       padding: 0;
@@ -165,11 +166,12 @@ export default {
       .text {
         padding: 1.5rem 1.5rem 2rem;
         display: inline-block;
-        background: $color-blue;
-        color: $color-white;
+        background: $color-white;
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
       h3, p, blockquote, a {
-        color: $color-white;
       }
       h3, :active {
         margin-bottom: 0.5rem;

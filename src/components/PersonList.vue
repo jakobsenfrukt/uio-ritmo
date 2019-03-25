@@ -31,6 +31,7 @@ export default {
 @import '@/css/variables.scss';
 
 .people {
+  margin-bottom: 2rem;
   h3 {
     width: $width-l;
     max-width: 100%;

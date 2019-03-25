@@ -109,6 +109,10 @@ ul {
   }
 }
 
+img {
+  max-width: 100%;
+}
+
 @media (max-width: $media-s) {
   h1 {
     font-size: 2.4rem;

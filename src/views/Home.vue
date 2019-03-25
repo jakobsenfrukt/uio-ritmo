@@ -108,18 +108,7 @@
     </section>
     <PersonList :people="people1" />
     <PersonList :people="people2" heading="Steering Committee" />
-    <Figure
-      image="https://www.hf.uio.no/ritmo/bilder/hf_imv_seal_a_eng.png"
-      size="column"
-    />
-    <Figure
-      image="https://www.hf.uio.no/ritmo/bilder/mn_ifi_seal_a_eng.png"
-      size="column"
-    />
-    <Figure
-      image="https://www.hf.uio.no/ritmo/bilder/sv_psyk_seal_a_eng.png"
-      size="column"
-    />
+    <LogoList heading="RITMO is a collaboration between" />
   </div>
 </template>
 
@@ -132,6 +121,7 @@ import ImageGallery from '@/components/ImageGallery.vue'
 import TwoColumn from '@/components/TwoColumn.vue'
 import FixedGallery from '@/components/FixedGallery.vue'
 import MultiColumn from '@/components/MultiColumn.vue'
+import LogoList from '@/components/LogoList.vue'
 
 export default {
   name: 'home',
@@ -142,7 +132,8 @@ export default {
     ImageGallery,
     TwoColumn,
     FixedGallery,
-    MultiColumn
+    MultiColumn,
+    LogoList
   },
   data: function() {
     return {

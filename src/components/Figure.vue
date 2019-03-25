@@ -40,9 +40,8 @@ div {
   }
 
   &.small {
-    width: $width-xs;
-    float: right;
-    margin: 1rem 2rem 2rem;
+    width: $width-xxs;
+    margin: 0 1rem;
   }
 
   &.column {

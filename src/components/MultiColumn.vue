@@ -74,8 +74,17 @@ export default {
     padding: 0;
     &-block {
       max-width: 100%;
-      display: block;
-      padding-right: 2rem;
+      display: flex;
+      padding-right: 0;
+      margin-top: 1rem;
+
+      .image {
+        width: 30%;
+      }
+      .text {
+        width: 70%;
+        padding-left: 1rem;
+      }
     }
   }
 }
