@@ -19,7 +19,6 @@
             <li><a href="#" id="toc9-link" v-scroll-to="{ el: '#toc9', onStart: togglemenu }">RITMO's profile</a></li>
             <li><a href="#" id="toc10-link" v-scroll-to="{ el: '#toc10', onStart: togglemenu }">Awards</a></li>
             <li><a href="#" id="toc11-link" v-scroll-to="'#toc11'">RITMO People</a></li>
-            <li><a href="#" id="toc12-link" v-scroll-to="'#toc12'">International</a></li>
           </ul>
         </div>
         <div class="menu-toggle" :class="{ open: showmenu }" @click="togglemenu()">
@@ -257,6 +256,9 @@ export default {
       line-height: 1.2;
       display: block;
       margin: 0.5rem 0 2rem;
+      @media (max-width: $media-s) {
+        font-size: 1rem;
+      }
     }
 
     ul {

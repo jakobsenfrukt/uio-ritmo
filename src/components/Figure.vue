@@ -27,7 +27,7 @@ export default {
 @import '@/css/variables.scss';
 
 div {
-  margin: 0 auto 4rem;
+  margin: 0 auto 1rem;
   max-width: 100%;
 
   figure {
@@ -103,7 +103,6 @@ div {
     }
 
     @media (max-width: $media-s) {
-      margin: 1rem auto 2rem;
       padding: 0 1rem;
       figure {
         display: block;

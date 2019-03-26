@@ -120,6 +120,9 @@ img {
   h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
+    &.section-heading {
+      padding-top: 3rem;
+    }
   }
   h3 {
     font-size: 1.6rem;
