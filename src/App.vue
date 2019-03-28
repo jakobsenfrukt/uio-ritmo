@@ -67,6 +67,18 @@ export default {
     }
   },
   methods: {
+    throttle: function(callback, limit) {
+      var wait = false;
+      return function () {
+        if (!wait) {
+          callback.apply(null, arguments);
+          wait = true;
+          setTimeout(function () {
+            wait = false;
+          }, limit);
+        }
+      }
+    },
     togglemenu: function() {
       this.showmenu = !this.showmenu;
     },
@@ -101,11 +113,11 @@ export default {
     }
   },
   created() {
-    window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('scroll', this.throttle(this.handleScroll, 100));
     this.updateMenu();
   },
   destroyed() {
-    window.removeEventListener('scroll', this.handleScroll)
+    window.removeEventListener('scroll', this.throttle)
   }
 }
 </script>

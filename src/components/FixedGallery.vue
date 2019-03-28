@@ -43,13 +43,25 @@ export default {
     Youtube
   },
   methods: {
-    inView(element) {
+    inView: function(element) {
       const { top, bottom } = element.getBoundingClientRect();
       const vHeight = (window.innerHeight || document.documentElement.clientHeight);
       return (
         (top > 0 || bottom > 0) &&
         top < vHeight
       );
+    },
+    throttle: function(callback, limit) {
+      var wait = false;
+      return function () {
+        if (!wait) {
+          callback.apply(null, arguments);
+          wait = true;
+          setTimeout(function () {
+            wait = false;
+          }, limit);
+        }
+      }
     },
     handleGalleryScroll: function() {
       const thisGallery = document.getElementById(this.id);
@@ -74,10 +86,10 @@ export default {
     },
   },
   created() {
-    window.addEventListener('scroll', this.handleGalleryScroll)
+    window.addEventListener('scroll', this.throttle(this.handleGalleryScroll, 100))
   },
   destroyed() {
-    window.removeEventListener('scroll', this.handleGalleryScroll)
+    window.removeEventListener('scroll', this.throttle)
   }
 }
 </script>
@@ -109,9 +121,6 @@ export default {
     align-items: center;
 
     .media {
-      position: absolute;
-      left: 0;
-      right: 0;
       display: none;
       &.visible {
         display: block;
