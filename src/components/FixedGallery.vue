@@ -1,15 +1,15 @@
 <template>
-  <div class="gallery-fixed">
-    <div class="wrapper item">
+  <div class="gallery-fixed" :id="id">
+    <div class="wrapper">
       <div class="media-wrapper">
-        <div v-for="(media, index) in media" :key="`media-${index}`" :id="`section${index}-media`" class="media" :class="{ 'visible': index === 0 }">
+        <div v-for="(media, index) in media" :key="`media-${index}`" :id="`${id}-section${index}-media`" class="media" :class="{ 'visible': index === 0 }">
           <img v-if="media.image" :src="media.image" />
           <Video v-else-if="media.video" :video="media.video" size="full" :controls="media.controls" />
           <Youtube v-else :video="media.youtube" size="full" />
         </div>
       </div>
       <div class="text-wrapper">
-        <div v-for="(media, index) in media" :key="`text-${index}`" :id="`section${index}`" class="text">
+        <div v-for="(media, index) in media" :key="`text-${index}`" :id="`${id}-section${index}`" class="text">
           <h3 v-if="media.heading">{{ media.heading }}</h3>
           <p v-if="media.caption">{{ media.caption }}</p>
           <template v-if="media.text">
@@ -35,7 +35,8 @@ import Youtube from '@/components/Youtube.vue'
 export default {
   name: 'FixedGallery',
   props: {
-    media: Array
+    media: Array,
+    id: String
   },
   components: {
     Video,
@@ -51,7 +52,7 @@ export default {
       );
     },
     handleGalleryScroll: function() {
-      const thisGallery = document.querySelector('.gallery-fixed');
+      const thisGallery = document.getElementById(this.id);
       if (this.inView(thisGallery)) {
         this.changeImage(thisGallery);
       }
@@ -111,10 +112,9 @@ export default {
       position: absolute;
       left: 0;
       right: 0;
-      opacity: 0;
-      transition: opacity .8s ease-in-out;
+      display: none;
       &.visible {
-        opacity: 1;
+        display: block;
       }
     }
 

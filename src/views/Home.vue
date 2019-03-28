@@ -37,7 +37,7 @@
       alt="Bildet viser no greier"
       size="column"
     />
-    <FixedGallery :media="gallery7" />
+    <FixedGallery :media="gallery7" id="fixed1" />
     <section id="toc3" class="toc text item">
       <h2 class="section-heading">RITMO's Research Priorities</h2>
       <p class="lead">In addition to RITMO's organizational clusters and operational research groups described above, we also have four research priorities that influence and guides all the other activities:</p>
@@ -46,7 +46,7 @@
     <section id="toc4" class="toc text item">
       <h2 class="section-heading">RITMO in Numbers</h2>
     </section>
-    <FixedGallery :media="gallery6" />
+    <FixedGallery :media="gallery6" id="fixed2" />
     <section id="toc5" class="toc text item">
       <h2 class="section-heading">RITMO Highlights</h2>
       <p class="lead">At a centre with more than 40 employees, there are always numerous things happening. In 2018 we were particularly proud of three things.</p>
@@ -68,7 +68,7 @@
       <h2 class="section-heading">RITMO Stories</h2>
       <p class="lead">A project is always more than what you can read from a project page. Hear some of RITMO's researchers present their own research.</p>
     </section>
-    <FixedGallery :media="gallery8" />
+    <FixedGallery :media="gallery8" id="fixed3" />
     <section id="toc7" class="toc text item background">
       <h2 class="section-heading">RITMO Seminar Series</h2>
       <p class="lead">In 2018 we started up the RITMO Seminar Series as a venue for presenting world-leading scholars from around the world. These events are open to the public, and have attracted participants from all over the Oslo area.</p>
@@ -84,7 +84,7 @@
       <p class="lead">It was clear from the start that RITMO could not only have a static, visual profile. After all, RITMO is about time, rhythm, and motion, and we wanted this to come through in our physical and digital appearance.</p>
       <p>The solution was to engage in a creative process with the design company Anagram and the composer Jon Balke. The end result is a sonic-visual profile that captures some of the creative spirit of RITMO, and that can be reconfigured endlessly.</p>
     </section>
-    <FixedGallery :media="gallery5" />
+    <FixedGallery :media="gallery5" id="fixed4" />
     <section id="toc10" class="toc text item background">
       <h2 class="section-heading">Awards</h2>
       <MultiColumn :blocks="blocks1" />
