@@ -327,6 +327,7 @@ export default {
 
   text-align: center;
   font-family: $serif;
+  line-height: 1.2;
 
   .flex {
     width: $width-xl;

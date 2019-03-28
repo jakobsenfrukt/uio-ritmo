@@ -2,14 +2,14 @@
   <div class="gallery-fixed">
     <div class="wrapper item">
       <div class="media-wrapper">
-        <div v-for="(media, index) in media" :key="`media-${index}`" class="media" :class="[index === 0 ? 'visible' : null]">
+        <div v-for="(media, index) in media" :key="`media-${index}`" :id="`section${index}-media`" class="media" :class="{ 'visible': index === 0 }">
           <img v-if="media.image" :src="media.image" />
           <Video v-else-if="media.video" :video="media.video" size="full" :controls="media.controls" />
           <Youtube v-else :video="media.youtube" size="full" />
         </div>
       </div>
       <div class="text-wrapper">
-        <div v-for="(media, index) in media" :key="`text-${index}`" class="text">
+        <div v-for="(media, index) in media" :key="`text-${index}`" :id="`section${index}`" class="text">
           <h3 v-if="media.heading">{{ media.heading }}</h3>
           <p v-if="media.caption">{{ media.caption }}</p>
           <template v-if="media.text">
@@ -40,6 +40,43 @@ export default {
   components: {
     Video,
     Youtube
+  },
+  methods: {
+    inView(element) {
+      const { top, bottom } = element.getBoundingClientRect();
+      const vHeight = (window.innerHeight || document.documentElement.clientHeight);
+      return (
+        (top > 0 || bottom > 0) &&
+        top < vHeight
+      );
+    },
+    handleGalleryScroll: function() {
+      const thisGallery = document.querySelector('.gallery-fixed');
+      if (this.inView(thisGallery)) {
+        this.changeImage(thisGallery);
+      }
+    },
+    changeImage: function(currentGallery) {
+      const mediaSections = currentGallery.querySelectorAll('.text');
+      for (const mediaSection of mediaSections) {
+        if (this.inView(mediaSection)) {
+          const mediaSectionId = mediaSection.getAttribute('id');
+          const media = currentGallery.querySelectorAll('.media');
+          for (const mediaItem of media) {
+            if (mediaItem.id === mediaSectionId + '-media') {
+              currentGallery.querySelector('.visible').classList.remove('visible');
+              mediaItem.classList.add('visible');
+            }
+          }
+        }
+      }
+    },
+  },
+  created() {
+    window.addEventListener('scroll', this.handleGalleryScroll)
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.handleGalleryScroll)
   }
 }
 </script>
@@ -71,9 +108,13 @@ export default {
     align-items: center;
 
     .media {
-      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transition: opacity .8s ease-in-out;
       &.visible {
-        display: block;
+        opacity: 1;
       }
     }
 

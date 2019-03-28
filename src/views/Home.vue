@@ -22,10 +22,6 @@
       size="column"
     />
     <Figure
-      image="https://www.hf.uio.no/vrtx/decorating/resources/dist/images/sff-merke-eng.png"
-      size="column"
-    />
-    <Figure
       image="https://www.hf.uio.no/ritmo/english/research/time/colourbox18441910.jpg"
       alt="Bevegelse i dans"
       size="full"
@@ -108,7 +104,7 @@
     </section>
     <PersonList :people="people1" />
     <PersonList :people="people2" heading="Steering Committee" />
-    <LogoList heading="RITMO is a collaboration between" />
+    <LogoList />
   </div>
 </template>
 
