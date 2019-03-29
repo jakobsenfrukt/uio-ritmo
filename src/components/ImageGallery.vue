@@ -13,7 +13,9 @@
     </div>
     <nav class="gallery-nav">
       <div class="pagination-button previous"><img class="arrow" src="/images/arrow-left.svg" /></div>
-      <img v-for="(image, index) in images" :key="`image-${index}`" :src="image.url" @click="changeImage(index)" :class="currentImage === index ? 'active' : null" class="nav-image" />
+      <div class="inner">
+        <img v-for="(image, index) in images" :key="`image-${index}`" :src="image.url" @click="changeImage(index)" :class="currentImage === index ? 'active' : null" class="nav-image" />
+      </div>
       <div class="pagination-button next"><img class="arrow" src="/images/arrow-right.svg" /></div>
     </nav>
     <nav class="pagination">
@@ -103,11 +105,16 @@ div {
   }
 }
 .gallery-nav {
-  padding: 0 3rem;
   width: 100%;
   max-width: 100%;
-  display: flex;
-  overflow-y: scroll;
+  height: 5rem;
+  overflow: hidden;
+  .inner {
+    padding: 0 4rem;
+    display: flex;
+    overflow-x: scroll;
+    padding-bottom: 17px;
+  }
   img {
     object-fit: cover;
     width: 4rem;
