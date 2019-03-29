@@ -48,9 +48,10 @@ export default {
     inView: function(element) {
       const { top, bottom } = element.getBoundingClientRect();
       const vHeight = (window.innerHeight || document.documentElement.clientHeight);
+      const offset = 200;
       return (
         (top > 0 || bottom > 0) &&
-        top < vHeight
+        top + offset < vHeight
       );
     },
     throttle: function(callback, limit) {
@@ -131,7 +132,7 @@ export default {
     }
 
     img, .video {
-      height: 50vh;
+      max-height: 50vh;
       max-width: 100%;
       display: block;
       margin: 0 auto;
