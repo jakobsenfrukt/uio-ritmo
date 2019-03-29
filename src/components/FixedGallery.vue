@@ -4,7 +4,7 @@
       <div class="media-wrapper">
         <div v-for="(media, index) in media" :key="`media-${index}`" :id="`${id}-section${index}-media`" class="media" :class="{ 'visible': index === 0 }">
           <img v-if="media.image" :src="media.image" />
-          <Video v-else-if="media.video" :video="media.video" size="full" :controls="media.controls" />
+          <Video v-else-if="media.video" :video="media.video" size="full" :controls="media.controls" :class="{ autoplay: !media.controls }" />
           <Youtube v-else :video="media.youtube" size="full" />
           <img v-if="media.mobileimage" :src="media.mobileimage" class="mobileimage" />
         </div>
@@ -214,7 +214,7 @@ export default {
       padding: 0;
     }
     .media-wrapper {
-      .video {
+      .video.autoplay {
         display: none;
       }
       img.mobileimage {
@@ -237,8 +237,8 @@ export default {
           margin-bottom: 0;
         }
       }
-      h3, p, blockquote, a {
-        color: $color-white
+      h3, p, blockquote, a, .credit {
+        color: $color-white;
       }
       h3, :active {
         margin-bottom: 0.5rem;
