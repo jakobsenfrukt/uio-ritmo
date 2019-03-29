@@ -121,6 +121,10 @@ p {
   }
 }
 
+.html p {
+  padding-left: 0;
+}
+
 ul {
   max-width: $width-s;
   margin: 0 auto 2rem;

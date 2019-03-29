@@ -323,17 +323,17 @@ export default {
           video: '/images/infographics/RITMO-People-kjonn.mp4',
           mobileimage: '/images/infographics/RITMO-People-kjonn.svg',
           heading: 'The People of RITMO',
-          caption: 'RITMO consists of 61 people in total: 26 women and 34 men.'
+          caption: 'A total of 60 people were employed at RITMO in 2018, of which there were 26 women and 34 men. We work to achieve gender balance in our recruitments. Diversity and gender balance was also addressed in the yearly meeting with the Scientific Advisory Board.'
         },
         {
           image: '/images/infographics/RITMO-People-land.svg',
           heading: 'The World at RITMO',
-          caption: 'We are fortunate to have people from all over the world working at RITMO. Currently, we have people from: Argentina, Australia, Brazil, Columbia, Denmark, Finland, France, Greece, India, Italy, China, Mexico, Montenegro, Norway, Poland, Great Britain, Turkey, Germany, and USA.'
+          caption: 'RITMO employees come from a number of different countries: Argentina, Australia, Brazil, Colombia, Denmark, Finland, France, Greece, India, Italy, China, Mexico, Montenegro, Norway, Poland, UK, Turkey, Germany, USA.'
         },
         {
           image: '/images/infographics/RITMO-Partners-land.svg',
           heading: 'RITMO in the World',
-          caption: 'Argentina, Belgium, Brazil, Canada, Switzerland, Germany, Denmark, Spain, Finland, France, United Kingdom, Israel, India, Iceland, Italy, Japan, Netherlands, Sweden, USA.'
+          caption: 'RITMO has research cooperation with partners from all over the world: Argentina, Belgium, Brazil, Canada, Switzerland, Germany, Denmark, Spain, Finland, France, United Kingdom, Israel, India, Iceland, Italy, Japan, Netherlands, Sweden, USA.'
         }
       ],
       gallery7: [

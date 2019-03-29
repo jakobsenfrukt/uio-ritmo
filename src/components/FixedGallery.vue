@@ -120,7 +120,7 @@ export default {
     margin: 0 auto 0 0;
     padding-right: 1rem;
     display: flex;
-    align-items: center;
+    align-items: top;
 
     .media {
       width: 100%;
@@ -131,9 +131,9 @@ export default {
     }
 
     img, .video {
-      width: 100%;
+      height: 50vh;
+      max-width: 100%;
       display: block;
-      align-self: center;
       margin: 0 auto;
     }
     img.mobileimage {
@@ -149,7 +149,7 @@ export default {
 
     .text {
       padding-top: 20%;
-      margin-bottom: 100vh;
+      margin-bottom: 50vh;
       &:last-child {
         margin-bottom: 30vh;
       }
@@ -216,7 +216,7 @@ export default {
       .video {
         display: none;
       }
-      .mobileimage {
+      img.mobileimage {
         display: block;
       }
     }
