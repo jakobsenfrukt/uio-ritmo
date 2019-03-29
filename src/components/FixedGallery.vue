@@ -146,6 +146,7 @@ export default {
     margin: 0 0 0 auto;
     padding: 0 1rem;
     font-family: $serif;
+    z-index: 10;
 
     .text {
       padding-top: 20%;
