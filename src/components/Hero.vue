@@ -8,7 +8,7 @@
       <transition name="fadeup" appear>
       <div class="text">
         <h1>{{ heading }}</h1>
-        <span class="subhead">{{ subhead }}</span>
+        <span class="subhead"><a href="https://www.hf.uio.no/ritmo/english">{{ subhead }}</a></span>
       </div>
       </transition>
     </div>
@@ -70,6 +70,11 @@ export default {
     display: block;
     margin: 0.5rem 0 1.6rem;
     color: $color-blue;
+
+    a {
+      font-weight: normal;
+      text-decoration: none;
+    }
   }
 
   @media (max-width: $media-s) {

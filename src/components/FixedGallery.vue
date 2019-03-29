@@ -88,7 +88,7 @@ export default {
     },
   },
   created() {
-    window.addEventListener('scroll', this.throttle(this.handleGalleryScroll, 100))
+    window.addEventListener('scroll', this.throttle(this.handleGalleryScroll, 300))
   },
   destroyed() {
     window.removeEventListener('scroll', this.throttle)
