@@ -1,7 +1,7 @@
 <template>
   <div class="hero">
     <img v-if="image" :src="image" />
-    <video v-else muted autoplay>
+    <video v-if="video" muted autoplay>
       <source :src="video" type="video/mp4">
     </video>
     <div class="overlay">
@@ -34,10 +34,17 @@ export default {
   margin: 2rem auto 2rem;
   position: relative;
   min-height: 60vh;
+  max-height: 100vh;
 
   img, video {
     width: 100%;
+    max-width: $width-xl;
+    margin: 0 auto;
+    display: block;
     padding-bottom: 6rem;
+  }
+  img {
+    display: none;
   }
 
   .overlay {
@@ -74,6 +81,12 @@ export default {
     }
     img, video {
       padding-bottom: 1rem;
+    }
+    video {
+      display: none;
+    }
+    img {
+      display: block;
     }
     .text {
       padding: 0 1rem;

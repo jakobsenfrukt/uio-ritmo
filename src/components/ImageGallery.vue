@@ -98,11 +98,10 @@ div {
 }
 .gallery-nav {
   padding: 0 3rem;
-  position: relative;
   width: 100%;
   max-width: 100%;
   display: flex;
-  overflow: hidden;
+  overflow-y: scroll;
   img {
     object-fit: cover;
     width: 4rem;
@@ -124,9 +123,10 @@ div {
   }
   .pagination-button {
     background: $color-white;
-    top: calc(50% - 1.6rem);
+    bottom: 1.6rem;
+    top: auto;
     &:hover {
-      background: inherit;
+      background: $color-white;
       img {
         box-shadow: none;
       }

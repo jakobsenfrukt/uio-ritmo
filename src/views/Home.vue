@@ -3,6 +3,7 @@
     <transition name="fade" appear>
       <Hero
         video="/images/logo/logo-anim-white.mp4"
+        image="/images/logo/logo-main.svg"
         heading="Annual Report 2018"
         subhead="RITMO - Centre for Interdisciplinary Studies in Rhythm, Time and Motion"
       />
@@ -295,6 +296,7 @@ export default {
         },
         {
           video: '/images/logo/logo-anim-white.mp4',
+          controls: true,
           heading: 'The Sonic Profile',
           quote: 'The sonic profile is designed to match RITMO\'s organic bodily understanding of rhythms to a more psychological approach, via social and cultural aspects. It was important for me to create something that is not tied up in a locked sense of pace or groove, but represents a rhythmic force and a course that could be experienced dramaturgically.',
           credit: 'Jon Balke, Batagraf'
@@ -309,6 +311,7 @@ export default {
       gallery6: [
         {
           video: '/images/infographics/RITMO-Results.mp4',
+          mobileimage: '/images/infographics/RITMO-Results.svg',
           heading: 'RITMO Publications',
           caption: 'RITMO\'s reserachers have published a number of scientific articles and book chapters in 2018. They have also given talks and presentations a large number of conferences around the world. The Centre\'s research results also include tool  boxes and apps, as well as several media contributions.',
           link: {
@@ -318,6 +321,7 @@ export default {
         },
         {
           video: '/images/infographics/RITMO-People-kjonn.mp4',
+          mobileimage: '/images/infographics/RITMO-People-kjonn.svg',
           heading: 'The People of RITMO',
           caption: 'RITMO consists of 61 people in total: 26 women and 34 men.'
         },
@@ -340,7 +344,8 @@ export default {
             'In the RHYTHM research cluster we investigate the basic structures and features of rhythmic phenomena as well as the links between these structures and features and the ways in which time is organized in human perception and cognition. We are also interested in why some rhythms are experienced as pleasurable and invite dance or other forms of body motion, whereas others do not.',
             'We investigate rhythm at various temporal scales, from micro-rhythmic relationships at the millisecond level to patterns of rhythms unfolding over several seconds. We are particularly interested in complex rhythms, rhythmic variation (micro-rhythm), rhythm across modalities (hearing, vision and body motion) and cultural variation. We use qualitative, behavioral and neurophysiological methods, often combining them to shed light on the same questions from different angles.',
             'Our aim is to understand how rhythm underpins our ability to structure past and predict future events, and to identify the perceptual and cognitive mechanisms underlying the experience and execution of rhythm.'
-          ]
+          ],
+          htmlcontent: '<h4 class="list-heading">Musical Rythm</h4><p>The <a href="https://www.hf.uio.no/ritmo/english/research/research-groups/musical-rhythm.html">Musical Rhythm</a> research group conducts research into a variety of musical genres where rhythm is a core dimension. The project <a href="https://www.hf.uio.no/ritmo/english/projects/flagship-projects/time/index.html">TIME: Timing and Sound in Musical Microrhythm</a> investigates interactions between temporal and sound-related features at the micro-level of rhythm.</p><h4 class="list-heading">Rhythm & Mind</h4><p>The <a href="https://www.hf.uio.no/ritmo/english/research/research-groups/rhythm-and-mind.html">Rhythm & Mind</a> research group focuses on how rhythm is processed in the brain.</p><h4 class="list-heading">Temporal Prediction</h4><p>The group doing research into <a href="https://www.hf.uio.no/ritmo/english/research/research-groups/temporal-prediction.html">Temporal Prediction</a> is run by <a href="https://www.hf.uio.no/ritmo/english/research/labs/front/index.html">front Neurolab</a> and aims at understanding one of the large unresolved questions about the human brain, namely how we predict upcoming events and action outcomes.</p>'
         },
         {
           image: '/images/time.jpg',
@@ -349,7 +354,8 @@ export default {
             'The TIME research cluster addresses the ways in which rhythm impacts the structuring of temporal events beyond the ‘now’, that is, the extent to which rhythm plays a role in remembering and structuring longer time spans. We will also investigate the relationship between rhythm and the experience of fragmented time.',
             'A second priority is to investigate the temporality of experiences of pleasure and absorption, the fact that rhythm facilitates entrainment and synchronization, and the social dimensions of this aspect of rhythm. A related question is how philosophical, psychological, and historical explorations of time can be revisited through new interdisciplinary perspectives on the experience of rhythm.',
             'Our aim is to understand how rhythm underpins our ability to structure and remember large-scale formations of time, and to understand the related processes of pleasure and engagement.'
-          ]
+          ],
+          htmlcontent: '<h4 class="list-heading">Large-Scale Form</h4><p>Our research into <a href="https://www.hf.uio.no/ritmo/english/research/research-groups/large-scale-form.html">Large-Scale Form</a> is focused on the time structure of audio-visual and musical works lasting from a couple to 20 or 30 minutes.</p><h4 class="list-heading">Engagement & Absorption</h4><p>In the <a href="https://hf.uio.no/ritmo/english/research/research-groups/engagement-and-absorption.html">Engagement & Absorption</a> research group we explore the rhythm and temporality of experiences characterised by deep engagement and/or absorption.</p><h4 class="list-heading">Remixing Time</h4><p>The research group on <a href="https://www.hf.uio.no/ritmo/english/research/research-groups/remixing-time.html">Remixing time</a> examines the pleasure of musical fragmentation and the related play with time, with a focus on sample-based- and cut-and-paste music. In the RCN-Young Research Talent project <a href="https://www.hf.uio.no/ritmo/english/projects/all/mashed/">MASHED</a>, the focus is on the underlying aesthetics and temporality of so-called <a href="https://www.hf.uio.no/ritmo/english/projects/all/mashed/mashups-copyright/">Mash-Up music</a>.</p><h4 class="list-heading">Entrainment & Pleasure</h4><p>The <a href="https://hf.uio.no/ritmo/english/research/research-groups/entrainment-and-pleasure.html">Entrainment & Pleasure</a> research group has a focus on why certain rhythms invite participation, the extent to which rhythm might have a social function, and the role of pleasure in such processes.</p>'
         },
         {
           image: '/images/motion.jpg',
@@ -358,7 +364,8 @@ export default {
             'The MOTION research cluster focuses on the analysis of human body rhythm and the synthesis of rhythms with machines. The aim is to understand more about the human body\'s internal and external rhythms and how rhythms can be used in interaction. It is also relevant to understand how music influences people\'s body motion, such as in dancing, but also when trying to stand still. Knowledge about the motion-inducing effects of music can then be used in the creation of interactive systems in which the music is controlled through the human body.',
             'The empirical work is done using various types of motion capture systems and physiological measurements. The analysis and synthesis parts also greatly involve computer-based analysis methods, and in particular different types of machine learning systems. The synthesis part includes both the creation of visual displays of motion (animations) and the creation and use of robots to create physical motion.',
             'The aim is to create basic knowledge that can be used in the development of advanced rhythmic human-robot interaction, such as in dancing.'
-          ]
+          ],
+          htmlcontent: '<h4 class="list-heading">Motion Analysis</h4><p>The <a href="https://www.hf.uio.no/ritmo/english/research/research-groups/motion-analysis.html">Motion Analysis</a> research group focuses on the analysis of human body motion using different types of motion capture systems (in the <a href="https://www.hf.uio.no/ritmo/english/research/labs/fourms/">fourMs Lab</a>) in order to understand and create rhythmic motion and interaction. The <a href="https://www.hf.uio.no/ritmo/english/projects/flagship-projects/micro/">MICRO</a> project has a particular focus on how music influences people\'s body motion when they are trying to stand still.</p><h4 class="list-heading">Motion Synthesis and Robotics</h4><p>The research group on <a href="https://hf.uio.no/ritmo/english/research/research-groups/rhythmic-robots.html">Motion Synthesis and Robotics</a> studies how machines can understand rhythm, and benefit from rhythmic mechanisms. The <a href="https://www.hf.uio.no/ritmo/english/projects/all/epec/index.html">EPEC</a> project works on engineering predictability with embodied cognition principles, and uses state-of-the-art facilities in the <a href="https://www.mn.uio.no/ifi/english/research/groups/robin/">ROBIN</a> lab at Department of Informatics.</p><h4 class="list-heading">Musical Interaction</h4><p>The <a href="file:///ritmo/english/research/research-groups/musical-interaction.html">Musical Interaction</a> research group focuses on the creation of interactive systems for music perception and performance. The methods used combine prototyping, sound design, composition, human-computer interaction design, machine learning, and signal processing.</p><h4 class="list-heading">Multimodal Information Retrieval</h4><p>The <a href="file:///ritmo/english/research/research-groups/multimodal-ir.html">Multimodal IR</a> research group uses computational approaches to extracting meaningful information from rhythmic signals, and is also connected to the new <a href="https://www.hf.uio.no/ritmo/english/projects/all/nordicsmc/">Nordic Sound and Music Computing Network</a>.</p>'
         }
       ],
       gallery8: [

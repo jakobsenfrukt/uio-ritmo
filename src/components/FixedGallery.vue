@@ -6,6 +6,7 @@
           <img v-if="media.image" :src="media.image" />
           <Video v-else-if="media.video" :video="media.video" size="full" :controls="media.controls" />
           <Youtube v-else :video="media.youtube" size="full" />
+          <img v-if="media.mobileimage" :src="media.mobileimage" class="mobileimage" />
         </div>
       </div>
       <div class="text-wrapper">
@@ -17,6 +18,7 @@
               {{ text }}
             </p>
           </template>
+          <div class="html" v-if="media.htmlcontent" v-html="media.htmlcontent"></div>
           <blockquote v-if="media.quote">
             {{ media.quote }}
           </blockquote>
@@ -121,6 +123,7 @@ export default {
     align-items: center;
 
     .media {
+      width: 100%;
       display: none;
       &.visible {
         display: block;
@@ -132,6 +135,9 @@ export default {
       display: block;
       align-self: center;
       margin: 0 auto;
+    }
+    img.mobileimage {
+      display: none;
     }
   }
 
@@ -153,7 +159,7 @@ export default {
       font-family: $sans-serif;
     }
 
-    p:last-of-type {
+    p:last-child{
       margin-bottom: 0;
     }
 
@@ -206,22 +212,32 @@ export default {
       width: 100%;
       padding: 0;
     }
+    .media-wrapper {
+      .video {
+        display: none;
+      }
+      .mobileimage {
+        display: block;
+      }
+    }
     .text-wrapper {
       position: relative;
       z-index: 2;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      padding: 1rem;
       
       .text {
         padding: 1.5rem 1.5rem 2rem;
         display: inline-block;
-        background: $color-white;
+        background: $color-blue;
         &:last-child {
           margin-bottom: 0;
         }
       }
       h3, p, blockquote, a {
+        color: $color-white
       }
       h3, :active {
         margin-bottom: 0.5rem;

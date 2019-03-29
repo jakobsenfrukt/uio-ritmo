@@ -30,6 +30,7 @@ export default {
 .logos {
   margin: 0 auto 4rem;
   width: $width-l;
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
   > div {
@@ -44,10 +45,10 @@ export default {
     width: 100%;
   }
   img {
-    width: $width-xxs;
-    max-width: 80%;
+    max-width: $width-xxs;
+    max-height: 8rem;
     display: block;
-    margin-bottom: 1rem;
+    margin: 0 0 1rem;
   }
 
   @media (max-width: $media-m) {
