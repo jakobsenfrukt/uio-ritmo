@@ -141,6 +141,12 @@ img {
   max-width: 100%;
 }
 
+@media (max-width: $media-m) {
+  .html p, .html h4, .html a {
+    color: $color-white;
+  }
+}
+
 @media (max-width: $media-s) {
   h1 {
     font-size: 2.4rem;
@@ -173,9 +179,6 @@ img {
     &.background {
       padding-bottom: 1rem;
     }
-  }
-  .html p, .html h4, .html a {
-    color: $color-white;
   }
 }
 

@@ -57,8 +57,10 @@
 <script>
 import Vue from 'vue';
 import VueScrollTo from 'vue-scrollto';
+import Vue2TouchEvents from 'vue2-touch-events';
 
 Vue.use(VueScrollTo)
+Vue.use(Vue2TouchEvents)
 
 export default {
   data: function() {

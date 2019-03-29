@@ -1,6 +1,6 @@
 <template>
   <section class="gallery item">
-    <div class="figure">
+    <div class="figure" v-touch:swipe.left="previousImage" v-touch:swipe.right="nextImage">
       <figure>
         <img :src="images[currentImage].url" class="main-image" />
         <div v-if="images[currentImage].caption" class="caption-wrapper">
@@ -12,9 +12,9 @@
       </figure>
     </div>
     <nav class="gallery-nav">
-      <div class="pagination-button previous" @click="currentImage > 0 ? currentImage-- : null"><img class="arrow" src="/images/arrow-left.svg" /></div>
+      <div class="pagination-button previous"><img class="arrow" src="/images/arrow-left.svg" /></div>
       <img v-for="(image, index) in images" :key="`image-${index}`" :src="image.url" @click="changeImage(index)" :class="currentImage === index ? 'active' : null" class="nav-image" />
-      <div class="pagination-button next" @click="currentImage < images.length-1 ? currentImage++ : null"><img class="arrow" src="/images/arrow-right.svg" /></div>
+      <div class="pagination-button next"><img class="arrow" src="/images/arrow-right.svg" /></div>
     </nav>
     <nav class="pagination">
       <div class="pagination-button previous" @click="currentImage > 0 ? currentImage-- : null"><img class="arrow" src="/images/arrow-left.svg" /></div>
@@ -37,6 +37,12 @@ export default {
   methods: {
     changeImage: function(index) {
       this.currentImage = index;
+    },
+    nextImage: function() {
+      this.currentImage > 0 ? this.currentImage++ : null
+    },
+    previousImage: function() {
+      this.currentImage > 0 ? this.currentImage-- : null
     }
   }
 }
